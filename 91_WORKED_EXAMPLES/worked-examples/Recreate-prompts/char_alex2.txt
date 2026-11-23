@@ -1,0 +1,9 @@
+Create a photorealistic three-panel character sheet, 16:9, three panels in one horizontal row separated by thin lines. The same 22-year-old young man in each panel.
+
+Alex has warm tan olive-brown skin, dark voluminous medium-length loose curls, expressive dark brown eyes, defined eyebrows, an angular clean-shaven face and a warm relaxed half-smile. Slim lean frame, long limbs and easy natural posture.
+
+He wears an open boxy short-sleeve red-and-white plaid shirt over a plain white long-sleeve thermal-knit shirt. The plaid hem reaches his hips and covers the waistband; the white sleeves reach his wrists. Extra-wide baggy washed-black jeans fall to black low-top sneakers with plain white soles and no visible branding. Hands empty, no hat or bag.
+
+LEFT: upright frontal head-and-shoulders portrait, face unobscured by curls, eyes toward the camera. CENTRE: straight front outfit view cropped at the base of the neck, showing shoulders, arms, empty hands, jeans and complete shoes. RIGHT: straight back outfit view at the same neck-down crop, with the plaid hem and white cuffs visible. Both outfit views use identical scale and foot alignment. The face appears only in the portrait.
+
+Neutral mid-grey seamless background, soft broad diffuse light, natural matte skin, clear fabric texture, gentle grounded shadows and clean neutral digital colour. Keep the same face, hair, clothing and proportions throughout. No text or labels.

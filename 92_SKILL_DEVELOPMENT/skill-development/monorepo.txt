@@ -1,0 +1,829 @@
+autonomous-post-production-ai-monorepo/
+│
+├── [001] SKILL.md                                                       # Master Root Router, Intent Classifier & Global Contract
+├── [002] AGENTS.md                                                      # Multi-Agent Swarm Topology, Department Hand-offs & State Machine
+├── [003] README.md                                                      # System Architecture, Execution Pipeline & Monorepo Index
+│
+├── 00-governance-and-schemas/
+│   ├── governance/
+│   │   ├── [004] stage-gate-progression-protocol.md                     # Enforces Paper Edit -> Assembly -> Rough -> Fine -> Lock -> Master
+│   │   ├── [005] evidence-gated-reasoning-contract.md                   # Mandates Scope/Transcript/CPS/LUFS citation per decision
+│   │   ├── [006] human-in-the-loop-escalation-matrix.md                 # Taste-gate triggers for Look Dev, Music & Equal-Take ties
+│   │   ├── [007] honest-limits-and-fallback-boundaries.md               # Deterministic boundaries of AI post-production execution
+│   │   ├── [008] deterministic-timecode-arithmetic-engine.md            # Frame-accurate SMPTE timecode math across all frame rates
+│   │   ├── [009] cross-department-ripple-propagation.md                 # How an EDL trim ripples to Color, Sound, VFX & Subtitles
+│   │   ├── [010] version-control-and-git-diff-timeline-spec.md          # Branching, merging, and diffing JSON/MD cut manifests
+│   │   ├── [011] naming-conventions-and- taxonomic-registry.md          # ISO/SMPTE/Studio file, reel, clip, and stem naming rules
+│   │   ├── [012] error-taxonomy-and-auto-remediation-loop.md            # Self-healing protocol when a downstream QC gate fails
+│   │   └── [013] multi-agent-conflict-resolution-arbitrator.md          # Arbitrating clashes between Editor pacing and Sound/Color needs
+│   └── schemas/
+│       ├── [014] schema-ingest-manifest.md                              # Schema lock: Camera card offload, checksums & clip metadata
+│       ├── [015] schema-word-level-transcript.md                        # Schema lock: ASR phoneme/word timestamps, speaker ID & pauses
+│       ├── [016] schema-paper-edit-blueprint.md                         # Schema lock: Narrative spine, selects rank & story beat map
+│       ├── [017] schema-edl-cut-manifest.md                             # Schema lock: Event list, source/record TC, transitions & rationale
+│       ├── [018] schema-rhythm-and-pacing-map.md                        # Schema lock: Beat-by-beat emotional tempo & shot-length curves
+│       ├── [019] schema-color-grade-specification.md                    # Schema lock: Scope evidence, 12-node graph, RGB math & look
+│       ├── [020] schema-shot-match-delta-matrix.md                      # Schema lock: Hero shot reference vs target shot scope deltas
+│       ├── [021] schema-subtitle-timed-text-cue.md                      # Schema lock: Cue timing, CPS, CPL, line break & style tags
+│       ├── [022] schema-subtitle-compliance-audit.md                    # Schema lock: Global & per-cue pass/warn/fail metrics
+│       ├── [023] schema-dialogue-edit-decision-list.md                  # Schema lock: Filler cuts, room-tone fills, clip-gain & ADR
+│       ├── [024] schema-sound-design-and-foley-cue.md                   # Schema lock: SFX/Foley sync TC, pan, level, reverb & layer
+│       ├── [025] schema-mix-and-loudness-specification.md               # Schema lock: DX/MX/FX stems, LUFS targets, dBTP & ducking
+│       ├── [026] schema-vfx-turnover-and-pull-sheet.md                  # Schema lock: Plate handles, color space, lens grid & comp notes
+│       ├── [027] schema-online-conform-relink-map.md                    # Schema lock: Proxy-to-RAW relink, sizing, retiming & pan-scan
+│       ├── [028] schema-delivery-and-mastering-spec.md                  # Schema lock: Picture, audio, timed-text & container parameters
+│       ├── [029] schema-automated-qc-gate-report.md                     # Schema lock: PSE flash, gamut, loudness, sync & black-frame audit
+│       └── [030] schema-imf-and-dcp-package-manifest.md                 # Schema lock: CPL, PKL, AssetMap & volumetric mastering index
+│
+├── 01-ingest-dailies-and-assistant-editing/
+│   ├── [031] SKILL.md                                                   # Department Router: Ingest, Sync, Dailies, Metadata & Indexing
+│   ├── camera-offload-and-checksums/
+│   │   ├── [032] SKILL.md                                               # Sub-Router: Offload Verification & Cryptographic Integrity
+│   │   ├── [033] offload-xxhash64-verification.md                       # High-speed xxHash64 bit-for-bit camera card validation
+│   │   ├── [034] offload-md5-sha256-dual-hash.md                        # Studio archival dual-hash generation and verification
+│   │   ├── [035] asc-mhl-media-hash-list-generator.md                   # ASC-MHL XML/MD chain-of-custody manifest generation
+│   │   ├── [036] camera-folder-structure-preservation.md                # Maintaining native ARRI/RED/Sony directory trees
+│   │   ├── [037] spanned-clip-reconstruction-logic.md                   # Stitching multi-chunk FAT32/exFAT spanned video files
+│   │   ├── [038] corrupt-frame-and-dropped-packet-scanner.md            # Detecting truncated frames and buffer underruns on ingest
+│   │   └── [039] multi-destination-3-2-1-backup-auditor.md              # Validating primary RAID, nearline NAS, and LTO tape parity
+│   ├── camera-raw-metadata-decompilation/
+│   │   ├── [040] SKILL.md                                               # Sub-Router: Native Camera Sensor & Lens Metadata Extraction
+│   │   ├── [041] arri-alexa-35-minilf-arriraw-mxf-parser.md             # Extracting Exposure Index, WB, Tint, ND & LDS-2 from ARRI
+│   │   ├── [042] red-r3d-ipp2-metadata-decompiler.md                    # Extracting ISO, Kelvin, FLUT, Shadow, CDL & compression ratio
+│   │   ├── [043] sony-venice-xocn-mxf-metadata-parser.md                # Extracting Dual Base ISO, User LUT, Anamorphic Desqueeze
+│   │   ├── [044] blackmagic-braw-sidecar-and-header-parser.md           # Extracting Gen 5 Color Science, Constant Quality/Bitrate parameters
+│   │   ├── [045] canon-cinema-raw-light-crm-parser.md                   # Extracting Canon Log 2/3, Gamut, Neutral Density & Dual Pixel AF
+│   │   ├── [046] panasonic-varicam-vraw-vlog-parser.md                  # Extracting Native 800/5000 ISO & V-Gamut metadata flags
+│   │   ├── [047] apple-prores-raw-atomos-header-parser.md               # Extracting sensor-native WB and ISO conversion tags
+│   │   ├── [048] cooke-i-technology-lens-metadata-extractor.md          # Frame-by-frame focal length, T-stop, focus distance & hyperfocal
+│   │   ├── [049] zeiss-extended-data-xd-shading-vignette-parser.md      # Extracting lens distortion and shading compensation profiles
+│   │   └── [050] anamorphic-squeeze-factor-normalization.md             # Normalizing 1.3x, 1.5x, 1.8x, and 2.0x pixel aspect ratios
+│   ├── timecode-and-multi-cam-sync/
+│   │   ├── [051] SKILL.md                                               # Sub-Router: Timecode Math, Frame Rate Conversion & Sync
+│   │   ├── [052] smpte-12m-ltc-linear-timecode-decoder.md               # Decoding audio-channel LTC into frame-accurate metadata TC
+│   │   ├── [053] vitc-and-ancillary-timecode-extractor.md               # Extracting RP-188 / VITC from SDI/MXF data streams
+│   │   ├── [054] drop-frame-vs-non-drop-frame-reconciler.md             # Reconciling 29.97/59.94 DF (;00;02 skip rules) vs NDF (:00)
+│   │   ├── [055] pulldown-2-3-and-3-2-cadence-removal.md                # Inverse telecine (IVTC) from 29.97i back to true 23.976p
+│   │   ├── [056] frame-rate-conform-23976-to-24000-math.md              # 0.1% pull-up/pull-down speed & audio pitch compensation
+│   │   ├── [057] pal-25fps-to-ntsc-23976-2997-standards-conversion.md   # 4% speed change vs optical flow motion-compensated conversion
+│   │   ├── [058] audio-waveform-cross-correlation-sync.md               # Sub-frame FFT phase correlation for scratch-to-boom syncing
+│   │   ├── [059] optical-slate-clapstick-closure-detector.md            # Visual frame detection of physical clapperboard impact
+│   │   ├── [060] smart-slate-digislate-ocr-timecode-reader.md           # Reading LED timecode digits off smart slates when jam fails
+│   │   ├── [061] clock-drift-and-sample-rate-mismatch-corrector.md      # Fixing 48.000 kHz vs 48.048 kHz drift over long takes
+│   │   └── [062] multicam-group-clip-angle-synchronizer.md              # Building N-angle synchronized multicam banks by time-of-day TC
+│   ├── dailies-transcode-and-proxy-pipeline/
+│   │   ├── [063] SKILL.md                                               # Sub-Router: Dailies Generation, Burn-ins & Proxy Encoding
+│   │   ├── [064] prores-422-proxy-and-lt-encoding-profile.md            # Optimal bitrates, gov structures & audio mapping for NLE proxies
+│   │   ├── [065] avid-dnxhr-lb-and-sq-mxf-op-atom-packager.md           # Generating Avid MediaFiles OP-Atom structures and .pmr/.mdb databases
+│   │   ├── [066] h264-h265-all-intra-review-dailies-profile.md          # Frame-accurate scrubbing web proxies without B-frame lag
+│   │   ├── [067] on-set-asc-cdl-and-show-lut-application.md             # Baking Slope/Offset/Power/Saturation + 33x33x33 .cube into proxies
+│   │   ├── [068] frame-burn-in-overlay-geometry-spec.md                 # Positioning Reel, Clip, Source TC, Record TC, FPS & Watermark
+│   │   ├── [069] aspect-ratio-framing-guide-overlay.md                  # Rendering 2.39:1, 1.85:1, 16:9, and 9:16 social center-cut guides
+│   │   ├── [070] polyphonic-bwf-wav-channel-splitting-and-routing.md    # Mapping ISO tracks + Mix track from field recorder iXML metadata
+│   │   └── [071] circle-take-filtering-and-script-supervisor-reconcile.md # Filtering print/circle takes from ScriptE / Filemaker XML logs
+│   ├── transcript-and-phoneme-indexing/
+│   │   ├── [072] SKILL.md                                               # Sub-Router: Word-Level Transcription, Diarization & Alignment
+│   │   ├── [073] asr-word-and-phoneme-timestamp-alignment.md            # Sub-10ms forced alignment of spoken words to timecode frames
+│   │   ├── [074] multi-speaker-diarization-and-character-binding.md     # Mapping voice embeddings to script character names and ISO tracks
+│   │   ├── [075] filler-word-and-disfluency-tagging-engine.md           # Indexing "um", "uh", "like", stutters, and false starts
+│   │   ├── [076] mid-sentence-pause-and-silence-duration-profiler.md    # Calculating exact millisecond duration of every silent gap
+│   │   ├── [077] vocal-energy-pitch-and-cadence-prosody-analyzer.md     # Scoring delivery intensity, inflection direction, and warmth
+│   │   ├── [078] script-to-transcript-fuzzy-line-alignment.md           # Mapping improvised or paraphrased takes back to script lines
+│   │   ├── [079] profanity-and-broadcast-compliance-word-scanner.md     # Flagging FCC/Ofcom restricted words with frame-exact timestamps
+│   │   └── [080] multilingual-code-switching-transcript-handler.md      # Tagging mid-sentence language shifts for downstream subtitling
+│   ├── visual-scene-and-shot-indexing/
+│   │   ├── [081] SKILL.md                                               # Sub-Router: Visual Content Analysis, Shot Scale & Camera Motion
+│   │   ├── [082] optical-shot-boundary-and-sub-clip-detector.md         # Detecting camera starts/stops, whip pans, and slate out-frames
+│   │   ├── [083] shot-scale-classification-ecu-cu-ms-ws-ews.md          # Classifying Extreme Close-Up to Extreme Wide Shot geometry
+│   │   ├── [084] camera-movement-taxonomy-pan-tilt-dolly-handheld.md    # Vector-flow classification of static, pan, tilt, gimbal, handheld
+│   │   ├── [085] face-detection-eyeline-and-gaze-vector-tracker.md      # Tracking screen-left/screen-right eyelines for 180-degree rule
+│   │   ├── [086] blink-detection-and-micro-expression-indexer.md        # Frame-exact indexing of actor eye blinks for Murch blink-cutting
+│   │   ├── [087] focus-sharpness-and-hunting-disqualification-scorer.md # Laplacian variance scoring to flag soft-focus or hunting frames
+│   │   ├── [088] camera-shake-and-unintended-bump-detector.md           # Identifying tripod bumps, operator stumbles, and lens zooms
+│   │   ├── [089] b-roll-semantic-object-and-action-tagger.md            # Indexing visual nouns and verbs in coverage for paper-edit matching
+│   │   └── [090] continuity-prop-wardrobe-and-position-tracker.md       # Flagging continuity mismatches across takes within the same scene
+│   └── nle-project-bin-and-organization/
+│       ├── [091] SKILL.md                                               # Sub-Router: Bin Architecture, Stringouts & Kem Rolls
+│       ├── [092] standardized-bin-hierarchy-generator.md                # Building 01_SEQ, 02_FOOTAGE, 03_AUDIO, 04_GFX, 05_VFX, 06_OUT
+│       ├── [093] kem-roll-and-scene-stringout-builder.md                # Assembling chronological camera rolls with 2-second black spacers
+│       ├── [094] line-by-line-multi-take-lineup-sequence-builder.md     # Concatenating all takes of Line A consecutively for rapid comparison
+│       ├── [095] marker-color-coding-taxonomy.md                        # Assigning Red/Green/Blue/Yellow/Cyan NLE markers by meaning
+│       ├── [096] subclip-naming-Scene-Shot-Take-Angle-spec.md           # Enforcing `14A-03_B` standard naming across all NLE items
+│       ├── [097] audio-track-layout-assignment-matrix.md                # A1-A2 Boom, A3-A8 Lavs, A9-A12 SFX, A13-A16 Ambience, A17-A20 MX
+│       ├── [098] video-track-layering-convention.md                     # V1 Primary Storyline, V2 B-Roll, V3 PIP/VFX, V4 Titles, V5 Burn-ins
+│       ├── [099] archival-unused-media-pruning-analyzer.md              # Identifying zero-reference media vs safety coverage
+│       └── [100] ingest-to-editorial-turnover-gate-validator.md         # Gate 01 Validator: Ensuring 100% sync, metadata & transcript parity
+│
+├── 02-editorial-craft-selects-and-pacing/
+│   ├── [101] SKILL.md                                                   # Department Router: Selects, Story Structure, Pacing & EDL
+│   ├── selects-and-take-evaluation-engine/
+│   │   ├── [102] SKILL.md                                               # Sub-Router: Algorithmic & Craft-Based Take Selection
+│   │   ├── [103] selects-heuristic-fewest-filler-words.md               # Scoring and penalizing takes by disfluency ratio per 100 words
+│   │   ├── [104] selects-heuristic-later-take-warm-up-preference.md     # Weighting later takes higher as speaker performance settles
+│   │   ├── [105] selects-heuristic-mid-sentence-dead-pause-filter.md    # Disqualifying takes with unmotivated pauses > 2000ms mid-clause
+│   │   ├── [106] selects-heuristic-silent-gap-opener-trimmer.md         # Locating exact zero-crossing before first phoneme to avoid word-clip
+│   │   ├── [107] selects-heuristic-incomplete-line-and-false-start.md   # Detecting abandoned clauses and stitching clean pickups
+│   │   ├── [108] selects-heuristic-emotional-authenticity-scoring.md    # Evaluating vocal tremor, eye engagement, and subtext delivery
+│   │   ├── [109] selects-heuristic-pacing-and-wpm-consistency.md        # Matching delivery cadence between adjacent takes so cuts feel native
+│   │   ├── [110] selects-heuristic-technical-disqualification-gate.md   # Rejecting takes with clothing rustle on lav, boom dip, or soft focus
+│   │   ├── [111] selects-frankenbite-and-syllable-stitch-constructor.md # Constructing seamless composite dialogue from multiple takes
+│   │   ├── [112] selects-reaction-shot-harvesting-protocol.md           # Extracting non-verbal nods, listens, and micro-reactions from tails
+│   │   ├── [113] selects-b-roll-hero-moment-isolation.md                # Isolating peak-action windows with clean entry/exit camera motion
+│   │   └── [114] selects-rationale-documentation-generator.md           # Writing mandatory `selection_rationale` and `disqualification_notes`
+│   ├── paper-edit-and-narrative-architecture/
+│   │   ├── [115] SKILL.md                                               # Sub-Router: Paper Edit Construction & Story Architecture
+│   │   ├── [116] paper-edit-a-roll-spine-assembly.md                    # Sequencing primary dialogue bites into a self-standing radio edit
+│   │   ├── [117] paper-edit-three-act-dramatic-structure-mapper.md      # Mapping Inciting Incident, Midpoint, Climax & Resolution beats
+│   │   ├── [118] paper-edit-documentary-thematic-weaving.md             # Intercutting interviews, verite scenes, and archival evidence
+│   │   ├── [119] paper-edit-commercial-hook-retain-payoff-arc.md        # Structuring 15s/30s/60s spots with 3-second thumb-stop hooks
+│   │   ├── [120] paper-edit-short-form-retention-curve-optimizer.md     # Engineering pattern interrupts every 4–7 seconds for vertical video
+│   │   ├── [121] paper-edit-corporate-and-educational-clarity-arc.md    # Problem -> Agitation -> Solution -> Proof -> Call-to-Action mapping
+│   │   ├── [122] paper-edit-b-roll-visual-counterpoint-pairing.md       # Pairing literal vs metaphorical visuals against spoken transcript
+│   │   ├── [123] paper-edit-scene-objective-and-conflict-auditor.md     # Verifying every scene advances plot or reveals character—else cut
+│   │   ├── [124] paper-edit-exposition-trimming-and-late-entry.md       # Applying "Enter Late, Leave Early" heuristic to scene boundaries
+│   │   └── [125] paper-edit-to-assembly-edl-compiler.md                 # Translating approved Paper Edit markdown directly into Assembly EDL
+│   ├── progressive-edit-stage-gates/
+│   │   ├── [126] SKILL.md                                               # Sub-Router: Stage-by-Stage Refinement Pipeline
+│   │   ├── [127] stage-1-radio-edit-dialogue-only-gate.md               # Evaluating narrative coherence with eyes closed (audio-only pass)
+│   │   ├── [128] stage-2-assembly-cut-completeness-gate.md              # Laying all script scenes in order without over-tightening
+│   │   ├── [129] stage-3-rough-cut-structural-reordering-gate.md        # Scene transposition, intercutting, and dead-weight scene deletion
+│   │   ├── [130] stage-4-fine-cut-frame-level-tightening-gate.md        # Shaving 2-to-8 frames off heads/tails, perfecting J/L overlaps
+│   │   ├── [131] stage-5-director-and-producer-notes-reconciler.md      # Parsing timecoded review notes into deterministic EDL mutations
+│   │   ├── [132] stage-6-picture-lock-freeze-and-signoff-gate.md        # Freezing frame counts, adding 2-pop, and locking turnover hashes
+│   │   └── [133] runtime-target-compression-and-expansion-engine.md     # Hitting exact broadcast clock (e.g., 21:30:00) via distributed trims
+│   ├── murch-rule-of-six-and-cutting-mechanics/
+│   │   ├── [134] SKILL.md                                               # Sub-Router: Walter Murch Prioritization & Cut Point Physics
+│   │   ├── [135] murch-priority-1-emotion-51-percent-evaluator.md       # Prioritizing emotional truth over spatial or continuity errors
+│   │   ├── [136] murch-priority-2-story-advancement-23-percent.md       # Ensuring every cut delivers new narrative information
+│   │   ├── [137] murch-priority-3-rhythm-10-percent-timing-grid.md      # Aligning cut points to internal visual and cadence pulse
+│   │   ├── [138] murch-priority-4-eye-trace-7-percent-screen-quadrant.md # Matching viewer focal point coordinates (X,Y) across cut boundaries
+│   │   ├── [139] murch-priority-5-2d-plane-of-screen-5-percent.md       # Respecting stage line, screen direction, and vector continuity
+│   │   ├── [140] murch-priority-6-3d-spatial-continuity-4-percent.md    # Maintaining physical room geography only when Priorities 1–5 hold
+│   │   ├── [141] cut-on-action-motion-peak-frame-calculator.md          # Cutting 2–3 frames before or during velocity peak for seamless flow
+│   │   ├── [142] cut-on-actor-blink-frame-synchronizer.md               # Aligning outgoing or incoming cut point to actor eyelid closure
+│   │   ├── [143] rule-of-180-degree-axis-violation-detector.md          # Detecting eyeline inversions and unintentional axis crosses
+│   │   └── [144] rule-of-30-degree-focal-and-angle-delta-checker.md     # Preventing accidental jump cuts by verifying >= 30° angle/scale shift
+│   ├── transition-taxonomy-and-overlap-math/
+│   │   ├── [145] SKILL.md                                               # Sub-Router: J-Cuts, L-Cuts, Match Cuts & Dissolve Mechanics
+│   │   ├── [146] j-cut-audio-lead-in-frame-offset-calculator.md         # Pre-lapping incoming dialogue 12–48 frames under outgoing reaction
+│   │   ├── [147] l-cut-audio-trail-out-frame-offset-calculator.md       # Extending outgoing audio under incoming visual coverage or cutaways
+│   │   ├── [148] graphic-match-cut-shape-and-composition-aligner.md     # Matching silhouette, horizon line, or geometric form across scenes
+│   │   ├── [149] motion-vector-match-cut-velocity-aligner.md            # Matching pan/tilt/zoom direction and angular speed across cuts
+│   │   ├── [150] audio-bridge-and-sound-match-cut-designer.md           # Linking disparate scenes via shared acoustic transient (e.g. kettle->train)
+│   │   ├── [151] smash-cut-contrast-maximizer.md                        # Maximizing tonal, acoustic, and visual contrast for shock transitions
+│   │   ├── [152] invisible-whip-pan-and-wipe-by-stitcher.md             # Hiding cuts inside motion-blurred foreground objects or whip pans
+│   │   ├── [153] intentional-jump-cut-stylistic-cadence-controller.md   # Governing rhythmic jump cuts for time-compression or anxiety
+│   │   ├── [154] cross-dissolve-duration-and-handle-validator.md        # Verifying sufficient source handles exist for 12/24/48-frame dissolves
+│   │   └── [155] dip-to-black-and-fade-from-black-chapter-pacing.md     # Calculating black-hold frames between major narrative acts
+│   ├── rhythm-pacing-and-emotional-tempo/
+│   │   ├── [156] SKILL.md                                               # Sub-Router: Pacing Curves, ASL & Musical Quantization
+│   │   ├── [157] average-shot-length-asl-curve-profiler.md              # Profiling rolling ASL across scenes to visualize tension arcs
+│   │   ├── [158] action-sequence-exponential-acceleration-curve.md      # Progressively shortening shot durations toward climax impact
+│   │   ├── [159] dramatic-dialogue-tension-and-hold-frame-logic.md      # Holding on silent listener face after heavy line delivery
+│   │   ├── [160] comedic-timing-setup-pause-punchline-button-math.md    # Frame-exact trimming of comedic beats and late-cut buttons
+│   │   ├── [161] horror-and-suspense-dread-elongation-pacing.md         # Subverting expected cut rhythm with uncomfortable long holds
+│   │   ├── [162] montage-compression-of-time-progression-builder.md     # Structuring training/travel/process montages with clear milestones
+│   │   ├── [163] music-bpm-beat-grid-and-transient-quantizer.md         # Snapping cuts to 1/4, 1/2, or bar downbeats without feeling robotic
+│   │   ├── [164] syncopated-off-beat-cutting-for-organic-groove.md      # Cutting 2 frames ahead of the beat for perceived visual energy
+│   │   ├── [165] speed-ramp-and-timewarp-bezier-curve-calculator.md     # Calculating 100% -> 400% -> 25% velocity ramps with smooth tangents
+│   │   └── [166] rhythm-map-beat-by-beat-tempo-serializer.md            # Generating the `rhythm_map` and `pacing_notes` fields for the EDL
+│   └── edl-xml-aaf-otio-serialization/
+│       ├── [167] SKILL.md                                               # Sub-Router: Timeline Interchange Serialization & Validation
+│       ├── [168] json-edl-cut-manifest-compiler.md                      # Compiling the master JSON EDL with `selection_rationale`
+│       ├── [169] cmx-3600-plain-text-edl-exporter.md                    # Emitting strict 8-char reel CMX 3600 EDL with `* FROM CLIP NAME`
+│       ├── [170] final-cut-pro-7-xml-v5-interchange-generator.md        # Generating legacy xmeml v5 for Premiere/Resolve/Baselight import
+│       ├── [171] apple-fcpxml-v1-11-spine-and-lane-serializer.md        # Emitting asset-clip, gap, and connected-lane FCPXML structures
+│       ├── [172] avid-aaf-composition-mob-and-master-mob-mapper.md      # Mapping EditRate, SourceClip, and TimelineMobSlot structures
+│       ├── [173] opentimelineio-otio-universal-schema-adapter.md        # Serializing Pixar OTIO Stack, Track, Clip, and ExternalReference
+│       ├── [174] edl-monotonic-record-timecode-validator.md             # Ensuring zero record-TC overlaps, gaps, or negative durations
+│       ├── [175] source-handle-availability-bounds-checker.md           # Verifying `source_in - handle >= media_start` across all cuts
+│       └── [176] human-readable-markdown-cut-rationale-report.md        # Rendering executive review document for timeline-free signoff
+│
+├── 03-color-grading-and-look-development/
+│   ├── [177] SKILL.md                                                   # Department Router: Color Science, Scopes, Node Graph & Looks
+│   ├── color-science-and-space-transforms/
+│   │   ├── [178] SKILL.md                                               # Sub-Router: Color Spaces, Transfer Functions & CST Math
+│   │   ├── [179] aces-v1-3-acescct-and-acescc-pipeline-config.md        # Configuring IDT -> ACESAP0 -> ACEScct Working -> RRT+ODT pipeline
+│   │   ├── [180] davinci-wide-gamut-intermediate-color-managed-math.md  # Mapping camera raw into DWG/Intermediate logarithmic working space
+│   │   ├── [181] arri-logc3-to-logc4-reveal-color-science-transform.md  # Handling ARRI ALEXA 35 LogC4 / AWG4 vs legacy LogC3 / AWG3
+│   │   ├── [182] red-log3g10-and-redwidegamutrgb-input-transform.md     # Exact CST parameters for RED IPP2 sensor gamut normalization
+│   │   ├── [183] sony-slog3-and-sgamut3-cine-input-transform.md         # Distinguishing S-Gamut3 vs S-Gamut3.Cine chromaticity primaries
+│   │   ├── [184] canon-log2-log3-and-cinema-gamut-transform.md          # Mapping Canon Cinema Gamut without magenta highlight clipping
+│   │   ├── [185] blackmagic-film-gen5-wide-gamut-transform.md           # Normalizing Pocket/URSA Gen 5 curves to working space
+│   │   ├── [186] dji-dlog-and-dlog-m-aerial-camera-normalization.md     # Matching drone 10-bit H.265/ProRes log profiles to A-cam hero
+│   │   ├── [187] rec709-gamma-2-4-vs-gamma-2-2-web-delivery-math.md     # Managing dim-surround Broadcast 2.4 vs sRGB/Mac QuickTime gamma shift
+│   │   ├── [188] dci-p3-d65-and-theatrical-2-6-gamma-output-transform.md # Configuring theatrical projection white point and transfer curve
+│   │   ├── [189] hdr-st2084-pq-1000-4000-nit-mastering-transform.md     # Absolute luminance mapping in Perceptual Quantizer space
+│   │   ├── [190] hdr-bt2100-hlg-hybrid-log-gamma-broadcast-transform.md # Scene-referred HLG backward-compatible SDR/HDR transform
+│   │   ├── [191] dolby-vision-l1-l2-l8-dynamic-metadata-trim-pass.md    # Generating shot-by-shot PQ statistical analysis and 100-nit SDR trims
+│   │   └── [192] gamut-mapping-saturation-compression-knee-rolloff.md   # Compressing out-of-gamut neon/LED primaries into legal container
+│   ├── scope-analytics-and-evidence-extraction/
+│   │   ├── [193] SKILL.md                                               # Sub-Router: Waveform, Vectorscope, Parade & Histogram Analysis
+│   │   ├── [194] waveform-luma-ire-black-point-calibration.md           # Setting shadow floor between 2–5 IRE without crushing detail at 0
+│   │   ├── [195] waveform-luma-ire-white-point-and-specular-ceiling.md  # Controlling diffuse white (80–90 IRE) vs specular peaks (95–100 IRE)
+│   │   ├── [196] waveform-midtone-exposure-placement-by-key-type.md     # Placing facial key exposure: High-Key (55–65 IRE), Low-Key (25–40 IRE)
+│   │   ├── [197] vectorscope-skin-tone-i-line-alignment-protocol.md     # Aligning human melanin reflectance along the 123° I-line axis
+│   │   ├── [198] vectorscope-melanin-saturation-vs-luminance-scaling.md # Adjusting vector magnitude for deep vs fair complexions accurately
+│   │   ├── [199] vectorscope-global-color-cast-centroid-diagnosis.md    # Identifying trace drift away from center reticle on neutral grays
+│   │   ├── [200] vectorscope-broadcast-legal-75-percent-box-auditor.md  # Detecting chrominance excursions beyond SMPTE legal vector targets
+│   │   ├── [201] rgb-parade-shadow-neutralization-alignment.md          # Balancing R=G=B shadow floors to eliminate muddy green/magenta blacks
+│   │   ├── [202] rgb-parade-highlight-neutralization-and-tint-check.md  # Equalizing R/G/B ceiling heights on specular and cloud highlights
+│   │   ├── [203] histogram-tonal-spread-and-banding-detector.md         # Identifying 8-bit comb gaps and posterization risks after heavy push
+│   │   ├── [204] cie-1931-xy-chromaticity-gamut-boundary-analyzer.md    # Auditing exact wavelength coordinates against Rec.709/P3 triangles
+│   │   └── [205] false-color-ire-zone-exposure-mapper.md                # Translating Pink/Green/Grey/Red/Purple false-color zones to node math
+│   ├── twelve-node-serial-parallel-architecture/
+│   │   ├── [206] SKILL.md                                               # Sub-Router: Standardized 12-Node Pipeline Construction
+│   │   ├── [207] node-01-technical-input-cst-and-noise-reduction.md     # Spatial/Temporal NR (2 frames, Medium luma) + Input Color Transform
+│   │   ├── [208] node-02-global-exposure-offset-and-printer-lights.md   # Linear exposure positioning before non-linear contrast shaping
+│   │   ├── [209] node-03-contrast-ratio-and-pivot-center-shaping.md     # Establishing dynamic range spread around middle-grey pivot (0.435)
+│   │   ├── [210] node-04-primary-balance-lift-gamma-gain-wb.md          # Neutralizing scene color temperature and green/magenta tint shifts
+│   │   ├── [211] node-05-parallel-hsl-skin-tone-isolation-and-heal.md   # Dedicated parallel node for complexion vector alignment and softening
+│   │   ├── [212] node-06-parallel-hsl-sky-and-foliage-sculpting.md      # Controlling cyan/blue sky density and yellow-green foliage shift
+│   │   ├── [213] node-07-power-windows-vignette-and-eye-light.md        # Tracked circular/polygon masks for subject separation and relighting
+│   │   ├── [214] node-08-depth-map-z-buffer-atmospheric-separation.md   # Foreground vs background contrast and haze separation
+│   │   ├── [215] node-09-creative-look-split-tone-and-matrix.md         # Scene-level creative color palette and RGB mixer cross-talk
+│   │   ├── [216] node-10-film-print-emulation-and-tonal-curve.md        # Applying film stock response curve under output space constraints
+│   │   ├── [217] node-11-halation-bloom-and-organic-film-grain.md       # Emulating emulsion red scatter, optical diffusion, and silver halide
+│   │   └── [218] node-12-output-cst-gamut-limiter-and-legal-clip.md     # Final transform to delivery display space with hard legal soft-clip
+│   ├── primary-grading-parameter-math/
+│   │   ├── [219] SKILL.md                                               # Sub-Router: Lift, Gamma, Gain, Offset & HDR Wheel Mathematics
+│   │   ├── [220] lift-rgb-shadow-black-point-offset-math.md             # Calculating R/G/B additive shadow shifts keeping white anchored at 1.0
+│   │   ├── [221] gamma-rgb-midtone-power-function-math.md               # Calculating non-linear R/G/B exponent shifts preserving 0.0 and 1.0
+│   │   ├── [222] gain-rgb-highlight-multiplier-slope-math.md            # Calculating R/G/B multiplicative slope shifts anchored at 0.0
+│   │   ├── [223] offset-rgb-master-wheel-global-translation-math.md     # Uniform additive translation across log/intermediate code values
+│   │   ├── [224] printer-lights-quarter-half-full-point-calibration.md  # Photochemical Red/Green/Blue/Cyan/Magenta/Yellow trim increments
+│   │   ├── [225] contrast-and-pivot-s-curve-mathematical-model.md       # Sigmoidal contrast gain and inflection point positioning
+│   │   ├── [226] color-boost-vs-saturation-vs-subtractive-density.md    # Comparing additive HSV saturation against filmic subtractive density
+│   │   ├── [227] shadow-and-highlight-log-wheel-range-isolation.md      # Using Low-Range and High-Range crossover sliders for tight toe/shoulder
+│   │   ├── [228] hdr-wheels-black-dark-shadow-zone-exposure.md          # Quarter-stop exposure & saturation control in lower stops
+│   │   ├── [229] hdr-wheels-light-highlight-specular-zone-control.md    # Recovering blown windows and shaping specular roll-off by stop
+│   │   └── [230] rgb-channel-mixer-crosstalk-3x3-matrix-math.md         # Designing 3x3 color matrices for custom primary calibration
+│   ├── curves-and-hsl-qualifier-engineering/
+│   │   ├── [231] SKILL.md                                               # Sub-Router: Spline Curves, Hue/Sat/Lum Curves & 3D Qualifiers
+│   │   ├── [232] custom-luma-curve-filmic-toe-and-shoulder-design.md    # Plotting 5-point bezier coordinates for creamy highlight roll-off
+│   │   ├── [233] per-channel-rgb-curves-split-toning-control.md         # Lifting Blue in shadows while warming Red/Green in mid-highs
+│   │   ├── [234] hue-vs-hue-targeted-color-rotation-math.md             # Rotating turquoise skies to deep cobalt or yellow grass to autumn gold
+│   │   ├── [235] hue-vs-saturation-selective-chroma-taming.md           # Pulling back neon signage and oversaturated wardrobe primaries
+│   │   ├── [236] hue-vs-luminance-color-density-sculpting.md            # Darkening blue skies or lifting skin luminance via hue band
+│   │   ├── [237] luma-vs-saturation-clean-blacks-and-whites-curve.md    # Rolling off saturation to 0.0 at 0 IRE and 100 IRE for filmic purity
+│   │   ├── [238] sat-vs-sat-high-saturation-compression-curve.md        # Taming only the most extreme 20% of saturated pixels
+│   │   ├── [239] hsl-qualifier-hue-center-width-and-symmetry-math.md    # Calculating exact degree center, width, and feather to avoid chatter
+│   │   ├── [240] hsl-qualifier-saturation-and-luminance-bound-gates.md  # Isolating skin from warm wood walls using Sat/Lum low-high softness
+│   │   ├── [241] qualifier-matte-finesse-clean-black-white-blur-math.md # Eradicating 4:2:0/4:2:2 blocky chroma key artifacts via matte blur
+│   │   └── [242]color-warper-spiderweb-grid-pin-and-drag-vectors.md     # Simultaneous Hue-Saturation vector warping with adjacent pin locking
+│   ├── shot-matching-and-scene-continuity/
+│   │   ├── [243] SKILL.md                                               # Sub-Router: Multi-Camera & Scene-Wide Shot Matching Protocol
+│   │   ├── [244] hero-shot-selection-and-reference-still-locking.md     # Choosing the master wide or key close-up as scene anchor
+│   │   ├── [245] four-step-shot-match-exposure-wb-contrast-skin.md      # Sequential matching: 1. Luma IRE -> 2. Parade WB -> 3. Contrast -> 4. Skin
+│   │   ├── [246] reverse-angle-lighting-ratio-reconciliation.md         # Matching sunlit A-side to backlit/shaded B-side reverse coverage
+│   │   ├── [247] mixed-color-temperature-lighting-neutralization.md     # Balancing 3200K tungsten practicals against 5600K daylight windows
+│   │   ├── [248] fluorescent-and-cheap-led-green-spike-removal.md       # Countering CRI gaps and green-magenta tint shifts in location footage
+│   │   ├── [249] x-rite-colorchecker-chart-matrix-alignment.md          # Calculating objective 24-patch delta-E minimization across cameras
+│   │   ├── [250] cloud-cover-and-time-of-day-exterior-drift-matching.md # Matching golden-hour takes to harsh mid-day pickups seamlessly
+│   │   ├── [251] archival-and-stock-footage-grade-harmonization.md      # De-sharpening and re-graining stock clips to match cinema A-cam
+│   │   └── [252] group-pre-clip-and-post-clip-shared-node-routing.md    # Structuring Shot-Level balance in Clip nodes vs Scene Look in Group Post-Clip
+│   └── look-development-and-finishing-optics/
+│       ├── [253] SKILL.md                                               # Sub-Router: Film Emulation, LUT Engineering & Optical FX
+│       ├── [254] kodak-2383-print-film-emulation-curve-and-matrix.md    # Classic Hollywood print contrast, cyan-shifted blues & warm skin
+│       ├── [255] kodak-2393-premier-high-contrast-print-emulation.md    # Deep shadow density and rich primary saturation characteristics
+│       ├── [256] fujifilm-3510-and-3513-eterna-print-emulation.md       # Soft pastel roll-off, emerald greens, and neutral shadow rendering
+│       ├── [257] kodak-portra-400-and-vision3-500t-5219-emulation.md    # Negative stock latitude, fine grain structure, and warm midtones
+│       ├── [258] bleach-bypass-silver-retention-look-architecture.md    # High local contrast, desaturated midtones, and metallic speculars
+│       ├── [259] teal-and-orange-complementary-split-tone-design.md     # Controlled shadow-cooling and skin-warming without plasticky clipping
+│       ├── [260] day-for-night-convincing-moonlight-conversion.md       # Underexposing -2.5 stops, softening contrast, cooling gamma, masking sky
+│       ├── [261] halation-emulsion-red-scatter-physics-model.md         # High-contrast edge detection -> red-orange channel blur -> screen blend
+│       ├── [262] optical-bloom-and-pro-mist-filtration-emulation.md     # Highlight threshold extraction -> multi-octave Gaussian glow
+│       ├── [263] organic-film-grain-8mm-16mm-35mm-65mm-synthesis.md     # Size, strength, roughness, and shadow-weighted grain opacity curves
+│       ├── [264] lens-vignette-and-anamorphic-edge-aberration.md        # Subtle optical falloff and peripheral lateral chromatic aberration
+│       ├── [265] 3d-lut-33x33x33-cube-export-and-stress-testing.md      # Validating LUT continuity against ramp sweeps to prevent quantization tears
+│       └── [266] grade-spec-json-and-drx-metadata-serializer.md         # Compiling complete File B Grade Specification with scope evidence
+│
+├── 04-sound-design-dialogue-foley-and-mixing/
+│   ├── [267] SKILL.md                                                   # Department Router: Dialogue Edit, Foley, Ambience, Music & Mix
+│   ├── dialogue-editing-and-cleanup/
+│   │   ├── [268] SKILL.md                                               # Sub-Router: Production Dialogue Assembly, Restoration & ADR
+│   │   ├── [269] boom-vs-lavalier-microphone-selection-matrix.md        # Prioritizing natural boom perspective over chesty lavs unless noisy
+│   │   ├── [270] sub-sample-phase-alignment-boom-and-lav-blending.md    # Eliminating comb filtering via time-delay and polarity alignment
+│   │   ├── [271] dialogue-checkerboarding-by-speaker-and-scene-track.md # Alternating speakers across DX1–DX8 tracks for independent EQ/comp
+│   │   ├── [272] word-and-syllable-filler-surgical-excision.md          # Removing "ums", lip smacks, and swallows at zero-crossing points
+│   │   ├── [273] breath-attenuation-and-natural-cadence-preservation.md # Reducing distracting gasps by -6 to -12 dB without sounding robotic
+│   │   ├── [274] room-tone-harvesting-and-seamless-fill-synthesis.md    # Extracting clean 5s noise prints and crossfading under every edit gap
+│   │   ├── [275] spectral-de-click-and-mouth-noise-restoration.md       # Attenuating transient saliva clicks between 2 kHz and 10 kHz
+│   │   ├── [276] spectral-de-plosive-p-and-b-pop-suppression.md         # Dynamic low-band surgical removal of 20 Hz–120 Hz mic blasts
+│   │   ├── [277] clothing-rustle-and-lavalier-scratch-attenuation.md    # Separating high-frequency fabric friction from vocal formants
+│   │   ├── [278] broadband-de-noise-and-hvac-rumble-extraction.md       # Neural/spectral noise reduction preserving vocal consonant clarity
+│   │   ├── [279] electrical-50hz-60hz-hum-and-harmonic-notch-filter.md  # High-Q notch filtering fundamental hum and up to 16 odd/even harmonics
+│   │   ├── [280] de-reverb-and-boxy-room-reflection-suppression.md      # Tightening reverberant location dialogue to match close-up visuals
+│   │   ├── [281] de-clip-and-digital-distortion-waveform-rebuild.md     # Reconstructing squared-off clipped peaks from unexpected shouts
+│   │   ├── [282] clip-gain-syllable-leveling-pre-compression.md         # Leveling raw dialogue within ±2 dB window before hitting bus compressor
+│   │   ├── [283] adr-spotting-cue-sheet-and-beep-sync-generator.md      # Generating ADR cue sheets with 3-beep streamer timing and reason codes
+│   │   └── [284] adr-worldizing-eq-and-reverb-match-to-production.md    # Matching clean studio ADR to noisy exterior production acoustics
+│   ├── foley-and-hard-sfx-engineering/
+│   │   ├── [285] SKILL.md                                               # Sub-Router: Foley Spotting, Surface Taxonomy & Hard Effects
+│   │   ├── [286] foley-footsteps-surface-and-footwear-taxonomy.md       # Matching heel-toe weight to shoe type (boot/sneaker/heel) and floor
+│   │   ├── [287] foley-cloth-and-movement-continuous-pass-design.md     # Layering subtle fabric rustle to anchor characters in physical space
+│   │   ├── [288] foley-prop-handling-and-tactile-micro-sync.md          # Frame-accurate sync for cup set-downs, key jingles, paper turns, phones
+│   │   ├── [289] hard-sfx-door-vehicle-and-mechanical-layering.md       # Multi-layering latch + creak + thud + air displacement for realism
+│   │   ├── [290] combat-and-impact-transient-body-sweetener-stack.md    # Combining high snap + mid meat thud + sub-bass weight for impacts
+│   │   ├── [291] weapons-and-ballistics-mech-blast-tail-design.md       # Layering mechanical action, muzzle transient, and environmental tail
+│   │   ├── [292] cinematic-whooshes-swells-and-transition-sfx.md        # Syncing frequency-swept whooshes to camera whip pans and graphics
+│   │   ├── [293] UI-hud-and-digital-screen-telemetry-beeps.md           # Designing non-fatiguing mid-high frequency tech interface cues
+│   │   ├── [294] lfe-sub-bass-boom-and-low-end-management.md            # Filtering LFE effects below 80–120 Hz without muddying main channels
+│   │   ├── [295] doppler-shift-and-pass-by-panning-automation.md        # Calculating pitch drop and L-C-R pan velocity for passing vehicles
+│   │   └── [296] perspective-filtering-off-screen-and-next-room-sfx.md  # Low-pass filtering + early reflection boost for occluded sound sources
+│   ├── ambience-and-acoustic-space-modeling/
+│   │   ├── [297] SKILL.md                                               # Sub-Router: Backgrounds, Room Tones & Convolution Reverb
+│   │   ├── [298] interior-room-tone-acoustic-signature-taxonomy.md      # Selecting quiet residential, fluorescent office, or warehouse air beds
+│   │   ├── [299] exterior-urban-traffic-and-city-skyline-layering.md    # Building distant city rumble + intermittent sirens + wind passes
+│   │   ├── [300] exterior-nature-wind-foliage-and-fauna-beds.md         # Avoiding repetitive bird loops via polyrhythmic stem offsetting
+│   │   ├── [301] weather-rain-thunder-and-storm-intensity-scaling.md    # Matching acoustic rain density to visual droplet size on lens/ground
+│   │   ├── [302] crowd-walla-and-background-chatter-density-control.md  # Ensuring background walla contains zero intelligible distracting words
+│   │   ├── [303] scene-boundary-ambience-checkerboarding-and-fades.md   # Hard-cutting or micro-fading BG stems precisely on visual scene cuts
+│   │   ├── [304] impulse-response-convolution-reverb-space-matching.md  # Selecting IR spaces (car, bathroom, alley, hall) matching camera lens
+│   │   └── [305] pre-delay-and-early-reflection-depth-positioning.md    # Shortening pre-delay to push background elements deeper into the screen
+│   ├── music-editing-and-score-integration/
+│   │   ├── [306] SKILL.md                                               # Sub-Router: Music Spotting, Stem Editing, Retiming & Ducking
+│   │   ├── [307] music-spotting-emotional-arc-and-entry-motivation.md   # Entering music on emotional turn or reaction rather than scene cut
+│   │   ├── [308] music-cue-out-point-button-vs-ring-out-decay.md        # Ending cues on dramatic impact button vs seamless reverb tail fade
+│   │   ├── [309] music-stem-deconstruction-drums-bass-melody-pads.md    # Muting vocal-range lead instruments during dense dialogue passages
+│   │   ├── [310] musical-bar-and-beat-seamless-duration-retiming.md     # Cutting on matching harmonic downbeats to shorten/lengthen a 3m cue to 45s
+│   │   ├── [311] tempo-map-and-meter-change-hit-point-alignment.md      # Aligning orchestral swells and downbeats to locked visual cut frames
+│   │   ├── [312] dynamic-dialogue-sidechain-ducking-envelope-math.md    # Pre-ducking music -4 to -9 dB 300ms before speech onset, 800ms release
+│   │   ├── [313] frequency-selective-spectral-ducking-1khz-4khz.md      # Carving only the 1 kHz–4 kHz presence pocket in music when DX speaks
+│   │   └── [314] music-cue-sheet-pro-rights-metadata-compiler.md        # Generating ASCAP/BMI/PRS cue sheet with composer, publisher, and usage TC
+│   ├── mixing-signal-flow-and-spatial-panning/
+│   │   ├── [315] SKILL.md                                               # Sub-Router: EQ, Dynamics, Bus Architecture & Spatial Formats
+│   │   ├── [316] dialogue-eq-high-pass-mud-cut-and-presence-boost.md    # 80 Hz HPF, 250 Hz box cut, 3 kHz intelligibility, 6 kHz de-ess
+│   │   ├── [317] dialogue-serial-compression-fast-peak-plus-leveler.md  # 1176-style fast peak catch (4:1) into LA-2A/Fairchild smooth leveling
+│   │   ├── [318] center-channel-dialogue-anchor-and-divergence.md       # Locking dialogue 100% Center in 5.1/7.1/Atmos for theater seating
+│   │   ├── [319] stereo-2-0-lo-ro-and-lt-rt-downmix-compatibility.md    # Checking phase correlation (+1.0 to 0.0) to prevent mono sum cancellation
+│   │   ├── [320] surround-5-1-and-7-1-channel-routing-l-r-c-lfe-ls-rs.md # SMPTE channel order validation and surround decorrelation
+│   │   ├── [321] dolby-atmos-7-1-2-bed-and-dynamic-object-metadata.md   # Assigning 3D X/Y/Z coordinates and size metadata for Atmos renderer
+│   │   ├── [322] binaural-headphone-spatial-rendering-validation.md     # Verifying HRTF binaural fold-down for mobile and streaming listeners
+│   │   ├── [323] dme-stem-architecture-dialogue-music-effects-split.md  # Ensuring DX + MX + FX stems sum mathematically identically to Full Mix
+│   │   └── [324] international-m-and-e-music-and-effects-validation.md  # Auditing 100% foley/cloth coverage in M&E stem for foreign dubbing
+│   └── loudness-compliance-and-master-limiting/
+│       ├── [325] SKILL.md                                               # Sub-Router: ITU-R BS.1770-4 Loudness & True Peak Mastering
+│       ├── [326] ebu-r128-european-broadcast-23-lufs-compliance.md      # Integrated -23.0 LUFS (±0.5 LU), Max -1.0 dBTP, Short-term <= -18 LUFS
+│       ├── [327] atsc-a85-us-broadcast-24-lkfs-compliance.md            # Integrated -24.0 LKFS (±1.0 LU), Max -2.0 dBTP, anchor dialogue intelligence
+│       ├── [328] netflix-streaming-27-lkfs-dialog-gated-spec.md         # Dolby Dialog-Gated -27.0 LKFS (±1.0 LU) and -2.0 dBTP ceiling
+│       ├── [329] youtube-tiktok-social-14-lufs-high-impact-spec.md      # Integrated -14.0 LUFS, -1.0 dBTP, tight LRA (4–7 LU) for mobile speakers
+│       ├── [330] podcast-and-mobile-voice-16-lufs-spec.md               # Apple/Spotify podcast -16.0 LUFS stereo / -19.0 LUFS mono spec
+│       ├── [331] theatrical-85-dbc-pink-noise-reference-calibration.md  # Mixing in uncompressed room-calibrated SPL reference environment
+│       ├── [332] loudness-range-lra-dynamic-envelope-controller.md      # Controlling macro dynamics between whisper and explosion (LRA 6–15 LU)
+│       ├── [333] inter-sample-true-peak-brickwall-limiter-math.md       # 4x/8x oversampled lookahead limiting to prevent DAC reconstruction clipping
+│       └── [334] sound-mix-spec-json-and-stem-manifest-serializer.md    # Compiling complete File D Sound Design & Mix Spec artifact
+│
+├── 05-subtitling-captioning-and-localization/
+│   ├── [335] SKILL.md                                                   # Department Router: Timed Text, CPS/CPL Math, SDH & Formats
+│   ├── reading-speed-density-and-timing-math/
+│   │   ├── [336] SKILL.md                                               # Sub-Router: CPS, CPL, Duration & Shot-Change Mathematics
+│   │   ├── [337] cps-characters-per-second-calculation-engine.md        # Exact formula: `total_visible_chars_including_spaces / duration_seconds`
+│   │   ├── [338] adult-20-cps-vs-17-cps-reading-speed-governor.md       # Enforcing 20 CPS ceiling (Netflix EN) or 17 CPS (non-EN/broadcast)
+│   │   ├── [339] children-programming-13-to-17-cps-governor.md          # Enforcing strict lower reading speed ceiling for youth demographics
+│   │   ├── [340] wpm-words-per-minute-160-180-broadcast-converter.md    # Converting 5-char word equivalents to WPM broadcast standards
+│   │   ├── [341] cpl-42-char-streaming-vs-37-char-bbc-line-limiter.md   # Counting glyph-plus-space width per line excluding markup tags
+│   │   ├── [342] double-byte-cjk-16-to-23-cpl-character-metrics.md      # Enforcing Chinese/Japanese/Korean full-width character line limits
+│   │   ├── [343] maximum-two-lines-per-cue-vertical-constraint.md       # Prohibiting 3-line cues across all theatrical and streaming specs
+│   │   ├── [344] minimum-cue-duration-833ms-and-1000ms-floor.md         # Enforcing >= 20 frames (at 24fps) / 833ms minimum display duration
+│   │   ├── [345] maximum-cue-duration-7000ms-split-threshold.md         # Splitting long sustained sentences exceeding 7.0 seconds on screen
+│   │   ├── [346] inter-cue-minimum-2-frame-gap-enforcer.md              # Inserting mandatory 2-frame blink gap between consecutive cues
+│   │   ├── [347] shot-change-snapping-dead-zone-2-to-11-frames.md       # Snapping out-cues to cut or extending >= 12 frames across the cut
+│   │   └── [348] audio-lead-in-and-lag-out-frame-tolerance.md           # Syncing cue in-point within ±3 frames of vocal onset, +12f tail extension
+│   ├── linguistic-segmentation-and-line-treatment/
+│   │   ├── [349] SKILL.md                                               # Sub-Router: Syntactic Line Breaking, Condensation & Punctuation
+│   │   ├── [350] syntactic-clause-boundary-line-break-rules.md          # Breaking at punctuation, conjunctions, or prepositional boundaries
+│   │   ├── [351] forbidden-linguistic-splits-article-noun-verb.md       # Never splitting article+noun, pronoun+verb, auxiliary+verb, or names
+│   │   ├── [352] bottom-heavy-pyramid-vs-balanced-line-geometry.md      # Minimizing ocular travel by balancing line lengths or pyramid weighting
+│   │   ├── [353] text-condensation-and-paraphrasing-for-cps-rescue.md   # Reducing word count by 20–35% while preserving 100% plot/tone intent
+│   │   ├── [354] dual-speaker-dialogue-hyphen-and-line-separation.md    # Assigning `- Speaker 1` on Line 1 and `- Speaker 2` on Line 2
+│   │   ├── [355] continuation-ellipses-vs-unpunctuated-flow-rules.md    # Applying modern Netflix no-ellipsis rule vs legacy broadcast `...`
+│   │   ├── [356] interrupted-speech-double-hyphen-vs-em-dash-spec.md    # Formatting abrupt mid-word or mid-sentence interruptions accurately
+│   │   ├── [357] italics-protocol-offscreen-electronic-and-foreign.md   # Applying `<i>` for voices through phones/radios, thoughts, and songs
+│   │   ├── [358] numbers-digits-vs-spelled-out-one-to-ten-rules.md      # Spelling out one through ten; using numerals for 11+ and units
+│   │   └── [359] bidirectional-rtl-arabic-hebrew-unicode-control.md     # Injecting LRM/RLM Unicode markers (`U+200E`/`U+200F`) to fix punctuation flip
+│   ├── sdh-closed-captions-and-forced-narratives/
+│   │   ├── [360] SKILL.md                                               # Sub-Router: Deaf/Hard-of-Hearing, Forced Narratives & Positioning
+│   │   ├── [361] sdh-speaker-identification-brackets-and-placement.md   # Formatting `[SARAH]` or `(Sarah)` when speaker is off-screen or ambiguous
+│   │   ├── [362] sdh-non-verbal-sound-effect-description-taxonomy.md    # Present-tense lower-case descriptive tags: `[heavy footsteps approaching]`
+│   │   ├── [363] sdh-music-mood-genre-and-lyric-formatting.md           # Formatting `[somber cello music playing]` and `♪ lyric lines ♪`
+│   │   ├── [364] sdh-whispered-muttered-and-accent-manner-tags.md       # Indicating vocal delivery manner `[whispering]`, `[in French accent]`
+│   │   ├── [365] forced-narrative-fn-on-screen-text-and-signage.md      # Translating plot-critical signs, texts, and newspapers in ALL CAPS
+│   │   ├── [366] forced-narrative-foreign-dialogue-part-subtitles.md    # Generating FN-only stream for foreign lines inside native audio track
+│   │   ├── [367] vertical-positioning-an8-top-screen-collision-avoid.md # Moving cues to top-center (`{\an8}` / `line:10%`) over lower-thirds
+│   │   └── [368] burn-in-open-caption-font-stroke-and-shadow-spec.md    # Helvetica/Arial/Inter, 80% black box or 3px outline for mobile readability
+│   └── timed-text-serialization-and-compliance-auditing/
+│       ├── [369] SKILL.md                                               # Sub-Router: SRT, WebVTT, TTML/IMSC1, EBU-STL & SCC Generators
+│       ├── [370] subrip-srt-utf8-bom-plain-text-serializer.md           # Generating sequential `HH:MM:SS,mmm --> HH:MM:SS,mmm` UTF-8 `.srt`
+│       ├── [371] webvtt-vtt-html5-cue-settings-and-css-serializer.md    # Generating `WEBVTT` with `line:`, `position:`, `align:` properties
+│       ├── [372] w3c-ttml1-and-imsc1-1-xml-netflix-profile-builder.md   # Generating frame-accurate `ttp:frameRate` XML with region layout styles
+│       ├── [373] ebu-tt-d-and-ebu-stl-binary-broadcast-serializer.md    # Generating European Broadcast Union teletext and XML timed text
+│       ├── [374] cea-608-and-708-line-21-scc-mcc-caption-encoder.md     # Encoding Pop-On, Paint-On, and Roll-Up hex byte-pairs for N.A. broadcast
+│       ├── [375] dcp-cinecanvas-interop-and-smpte-428-7-xml-builder.md  # Generating theatrical digital cinema subtitle XML + PNG font packages
+│       ├── [376] per-cue-cps-cpl-duration-compliance-auditor.md         # Evaluating every cue as `pass`, `warn`, or `fail` with exact violation code
+│       └── [377] subtitle-compliance-report-json-and-md-serializer.md   # Compiling complete File C Subtitle & Compliance Report artifact
+│
+├── 06-vfx-motion-graphics-cleanup-and-conforming/
+│   ├── [378] SKILL.md                                                   # Department Router: Online Conform, VFX Pulls, Cleanup & GFX
+│   ├── online-conform-and-reconform-engine/
+│   │   ├── [379] SKILL.md                                               # Sub-Router: Proxy-to-RAW Relinking, Pan-Scan & Reconform
+│   │   ├── [380] proxy-to-camera-raw-reel-and-timecode-relinker.md      # Resolving proxy EDL cuts back to uncompressed R3D/ARRIRAW/X-OCN
+│   │   ├── [381] offline-reference-pic-difference-matte-verifier.md     # Running pixel-difference blend check against offline locked QuickTime
+│   │   ├── [382] reconform-delta-engine-edl-v1-to-edl-v2-differ.md      # Migrating existing grades and VFX across picture-lock revisions
+│   │   ├── [383] optical-flow-vs-frame-blend-speed-change-conform.md    # Selecting motion-estimation vectors vs shutter blend for retimed clips
+│   │   ├── [384] spatial-scaling-lanczos-catmull-rom-super-scale.md     # Upscaling HD archival or punched-in 4K shots cleanly to UHD/4K master
+│   │   ├── [385] stabilization-translation-rotation-perspective-lock.md # Smoothing unwanted camera jitter with minimum zoom crop penalty
+│   │   ├── [386] rolling-shutter-jello-skew-compensation-math.md        # Correcting CMOS sensor scanline skew during fast pans
+│   │   └── [387] smart-reframe-16x9-to-9x16-4x5-1x1-pan-scan.md         # Keyframing X-axis subject tracking for multi-aspect social deliverables
+│   ├── vfx-turnover-and-pull-automation/
+│   │   ├── [388] SKILL.md                                               # Sub-Router: VFX Spotting, EXR Plate Pulls & Camera Metadata
+│   │   ├── [389] vfx-shot-identification-and-naming-registry.md         # Enforcing `SHOW_EP101_020_010_v001` naming and status tracking
+│   │   ├── [390] openexr-16bit-half-float-acescg-linear-plate-pull.md   # Exporting unclipped linear AP1 plates with PI-Z / DWAA compression
+│   │   ├── [391] vfx-handle-padding-8-12-24-frame-head-tail-math.md     # Extending source pulls by exact handle length with slate Frame 1001
+│   │   ├── [392] vfx-count-sheet-and-thumbnail-turnover-generator.md    # Generating CSV/PDF/MD count sheets with frame ranges and brief notes
+│   │   ├── [393] lens-distortion-grid-stmap-uv-export-protocol.md       # Generating 32-bit float RG UV warpers for undistort/redistort workflow
+│   │   ├── [394] 3d-camera-track-point-cloud-and-fbx-usd-exporter.md    # Solving focal length and 6-DOF camera path for CG integration
+│   │   └── [395] on-set-hdri-chrome-ball-and-macbeth-reference-pack.md  # Bundling lighting spheres and Neutral Grade CDL (.ccc) with plates
+│   ├── invisible-cleanup-roto-and-compositing/
+│   │   ├── [396] SKILL.md                                               # Sub-Router: Chroma Key, Paint-Out, Screen Comp & Beauty
+│   │   ├── [397] chroma-key-core-matte-plus-soft-edge-combination.md    # Combining IBK/Delta keyer soft hair edges with solid core garbage matte
+│   │   ├── [398] green-blue-spill-suppression-and-edge-light-wrap.md    # Despilling reflections and wrapping background luminance onto edges
+│   │   ├── [399] wire-rig-and-boom-mic-temporal-clone-paint-out.md      # Planar tracking clean background patches to erase production gear
+│   │   ├── [400] dead-pixel-sensor-dust-and-lens-flare-dirt-removal.md  # Automated median/spatial healing of hot pixels and dust spots
+│   │   ├── [401] planar-corner-pin-phone-and-monitor-screen-comp.md     # Sub-pixel Mocha planar tracking with reflection, finger roto & defocus
+│   │   ├── [402] frequency-separation-skin-blemish-and-beauty-work.md   # Separating high-frequency skin pores from low-frequency blotchiness
+│   │   └── [403] composite-grain-matching-and-color-space-roundtrip.md  # Re-graining clean patches only inside the alpha matte to match plate
+│   └── motion-graphics-titles-and-credits/
+│       ├── [404] SKILL.md                                               # Sub-Router: Typography, Lower Thirds, Sub-safe Zones & Credits
+│       ├── [405] broadcast-title-safe-90-and-action-safe-93-guides.md   # Enforcing SMPTE RP-2046-2 safe area boundaries for all text overlays
+│       ├── [406] lower-third-entry-hold-exit-kinetic-typography.md      # Calculating reading duration (min 3.5s) and smooth cubic-bezier easing
+│       ├── [407] end-credit-scroll-integer-pixel-per-frame-anti-judder.md # Enforcing exact integer vertical velocity (e.g., 3.0 or 4.0 px/frame)
+│       ├── [408] main-title-card-contrast-and-luminance-legibility.md   # Ensuring legal SDR/HDR peak brightness (<= 100–200 nits) on white titles
+│       └── [409] graphics-alpha-channel-straight-vs-premultiplied.md    # Preventing dark fringes on ProRes 4444 / EXR graphic overlays
+│
+├── 07-finishing-mastering-and-automated-qc/
+│   ├── [410] SKILL.md                                                   # Department Router: Mastering, Format Adapters, Delivery & QC
+│   ├── picture-mastering-codecs-and-containers/
+│   │   ├── [411] SKILL.md                                               # Sub-Router: Mezzanine Codecs, Bitrates, Rasters & Blankings
+│   │   ├── [412] apple-prores-422-hq-and-4444-xq-mastering-profile.md   # 10-bit 4:2:2 (220 Mbps) vs 12-bit 4:4:4:4 XQ (500 Mbps) MOV profiles
+│   │   ├── [413] avid-dnxhr-hqx-10bit-and-444-12bit-mxf-op1a.md         # SMPTE RDD-36 MXF OP1a broadcast mastering container specs
+│   │   ├── [414] sony-xavc-intra-class-300-and-480-mxf-master.md        # CBG 10-bit 4:2:2 Intra-frame mastering for UHD broadcast delivery
+│   │   ├── [415] h264-and-hevc-h265-abr-streaming-encoding-ladder.md    # 2-pass VBR/CRF rate control, GOP size (2s), and profile/level settings
+│   │   ├── [416] av1-and-vp9-next-gen-web-distribution-encoding.md      # Configuring 10-bit film-grain synthesis and tile-based web encoding
+│   │   ├── [417] resolution-and-raster-validation-hd-uhd-dci2k-dci4k.md # Verifying exact pixel dimensions and 1.0 square pixel aspect ratio
+│   │   ├── [418] active-image-area-and-letterbox-blanking-auditor.md    # Ensuring 100% pure digital black (R=0,G=0,B=0) in matte bars, zero half-pixels
+│   │   └── [419] quicktime-nclc-color-atoms-1-1-1-vs-1-2-1-tagger.md    # Writing exact Primaries/Transfer/Matrix metadata tags into MOV/MP4 headers
+│   ├── imf-and-dcp-studio-packaging/
+│   │   ├── [420] SKILL.md                                               # Sub-Router: SMPTE IMF ST.2067 & Digital Cinema Package (DCP)
+│   │   ├── [421] smpte-imf-app-2e-jpeg2000-video-track-file-builder.md  # Packaging lossless/visually-lossless J2K MXF track files
+│   │   ├── [422] smpte-imf-composition-playlist-cpl-xml-generator.md    # Constructing multi-version regional CPL timelines without re-rendering video
+│   │   ├── [423] smpte-imf-packing-list-pkl-and-assetmap-builder.md     # Generating SHA-1 asset hashes and UUID cross-reference manifests
+│   │   ├── [424] supplemental-imf-package-imp-delta-patch-builder.md    # Exporting only fixed frames/shots as a lightweight supplemental IMP
+│   │   ├── [425] theatrical-dcp-xyz-12bit-2-6-gamma-j2k-encoder.md      # Converting RGB to CIE XYZ 250 Mbps JPEG 2000 frame sequences
+│   │   └── [426] dcp-kdm-encryption-and-smpte-rdd52-validator.md        # Validating SMPTE DCP structure, 24.000 fps lock, and 5.1/7.1 PCM essence
+│   ├── platform-delivery-specification-matrices/
+│   │   ├── [427] SKILL.md                                               # Sub-Router: Streamer, Broadcast & Social Spec Compliance
+│   │   ├── [428] netflix-branded-post-delivery-specification.md         # UHD IMF Dolby Vision + Atmos + -27 LKFS + IMSC1.1 timed text matrix
+│   │   ├── [429] amazon-prime-video-direct-and-studios-spec.md          # ProRes 422 HQ / IMF + 5.1/2.0 PCM + SMPTE-TT / TTML delivery matrix
+│   │   ├── [430] apple-tv-plus-and-itunes-store-package-spec.md         # .itmsp package structure, ProRes, Dolby Atmos, and ITT caption matrix
+│   │   ├── [431] bbc-and-uk-dpp-as-11-mxf-broadcast-delivery-spec.md    # AS-11 UK DPP HD/UHD MXF, EBU R128 -23 LUFS, PSE Harding, and EBU-TT
+│   │   ├── [432] us-network-broadcast-pbs-nbc-cbs-abc-delivery-spec.md  # XDCAM HD422 / ProRes, ATSC A/85 -24 LKFS, CEA-708 captions, and slates
+│   │   ├── [433] youtube-4k-hdr-and-sdr-optimal-upload-master-spec.md   # High-bitrate ProRes/H.264, -14 LUFS, BT.709/PQ tags, and SRT tracks
+│   │   ├── [434] tiktok-instagram-reels-and-shorts-9x16-master-spec.md  # 1080x1920 30/60fps, UI safe-zone clearance, -14 LUFS, burned-in hooks
+│   │   └── [435] festival-screener-and-vimeo-pro-archive-spec.md        # Password-protected 1080p/4K H.264 25-50 Mbps + backup DCP spec
+│   ├── leaders-slates-and-sync-verification/
+│   │   ├── [436] SKILL.md                                               # Sub-Router: Bars & Tone, Universal Leaders, 2-Pops & Slates
+│   │   ├── [437] smpte-rp-219-hd-and-arib-std-b28-uhd-color-bars.md     # Placing 60s of 75%/100% SMPTE Bars at 00:58:30:00 pre-program
+│   │   ├── [438] reference-tone-1khz-minus-20-dbfs-channel-id-spec.md   # Generating -20 dBFS (US) or -18 dBFS (EBU) 1 kHz sine with BLITS ID
+│   │   ├── [439] production-information-slate-metadata-layout.md        # Formatting Title, Version, Runtime, FPS, Color Space, Audio Config
+│   │   ├── [440] countdown-leader-and-head-2-pop-00-59-58-00-spec.md    # Placing exact 1-frame white circle + 1 kHz beep 2.00 seconds before FFOA
+│   │   ├── [441] first-frame-of-action-ffoa-01-00-00-00-lock-check.md   # Enforcing exact program start at Hour 01:00:00:00 (or 00:00:00:00 IMF)
+│   │   └── [442] tail-2-pop-and-post-roll-black-pad-specification.md    # Placing 1-frame tail pop 2.00 seconds after LFOA + 10s silent black
+│   └── automated-quality-control-qc-gates/
+│       ├── [443] SKILL.md                                               # Sub-Router: Final Automated QC Inspection & Gate Sign-Off
+│       ├── [444] qc-gate-01-harding-fpa-pse-photosensitive-epilepsy.md  # Auditing luminance/red flashes (>3 flashes/sec above candela delta)
+│       ├── [445] qc-gate-02-broadcast-legal-gamut-and-ire-excursion.md  # Checking 0–100 IRE luma and 16–235 / 64–940 code value compliance
+│       ├── [446] qc-gate-03-unintended-black-frame-and-flash-frame.md   # Scanning for 1–3 frame single-frame edit gaps or orphan tail frames
+│       ├── [447] qc-gate-04-freeze-frame-and-dropped-render-frame.md    # Detecting accidental duplicate frames or GPU render glitches
+│       ├── [448] qc-gate-05-audio-clipping-dropout-and-dc-offset.md     # Auditing for digital overs, sudden 1-frame mute drops, and DC bias
+│       ├── [449] qc-gate-06-lip-sync-drift-millisecond-correlation.md   # Verifying audio-visual sync stays within -15ms lead to +45ms lag
+│       ├── [450] qc-gate-07-clipped-dialogue-words-at-edit-boundaries.md # Auditing every cut point to ensure zero first/last phoneme truncation
+│       ├── [451] qc-gate-08-subtitle-sync-cps-cpl-and-safe-area-gate.md # Final gate pass on all timed-text streams against visual lower-thirds
+│       ├── [452] qc-gate-09-file-naming-container-and-checksum-gate.md  # Validating final deliverable filename regex and sidecar hash integrity
+│       └── [453] delivery-finishing-spec-sheet-markdown-serializer.md   # Compiling complete File E Delivery / Finishing Spec Sheet artifact
+│
+├── 08-specialized-genre-and-format-playbooks/
+│   ├── [454] SKILL.md                                                   # Department Router: Genre-Specific End-to-End Post Playbooks
+│   ├── narrative-cinema-and-episodic-drama/
+│   │   ├── [455] SKILL.md                                               # Sub-Router: Feature Film & Prestige Episodic Television
+│   │   ├── [456] dramatic-dialogue-scene-coverage-pyramid-strategy.md   # Moving from establishing wide -> medium two-shot -> tight OTS -> ECU
+│   │   ├── [457] ensemble-dinner-table-multi-eyeline-geometry.md        # Managing 5+ character eyelines and 180-degree axes around a table
+│   │   ├── [458] thriller-cross-cutting-parallel-action-escalation.md   # Intercutting ticking-clock storylines with converging ASL curves
+│   │   ├── [459] period-drama-naturalistic-candlelight-grade-and-mix.md # Preserving warm 2200K practical shadow detail and quiet dynamic range
+│   │   └── [460] sci-fi-and-fantasy-vfx-heavy-temp-to-final-workflow.md # Managing temp previz slugs, color-managed plates, and futuristic SFX
+│   ├── documentary-and-unscripted-non-fiction/
+│   │   ├── [461] SKILL.md                                               # Sub-Router: Feature Doc, Docuseries & True Crime Post
+│   │   ├── [462] multi-hour-interview-synthesis-into-narrative-pods.md  # Distilling 40+ hours of talking heads into thematic story chapters
+│   │   ├── [463] verite-observational-scene-invisible-stitching.md      # Cutting chaotic handheld verite using B-roll bridges and natural sound
+│   │   ├── [464] archival-photo-ken-burns-and-parallax-2-5d-rigging.md  # Animating still photographs with subtle depth separation and film dust
+│   │   ├── [465] true-crime-evidence-callout-and-timeline-graphics.md   # Highlighting documents, 911 audio waveforms, and map progressions
+│   │   └── [466] documentary-ethical-frankenbite-disclosure-auditor.md  # Ensuring composite edits never invert or fabricate speaker meaning
+│   ├── commercials-trailers-and-music-videos/
+│   │   ├── [467] SKILL.md                                               # Sub-Router: High-Impact Short-Form, Trailers & Music Videos
+│   │   ├── [468] movie-trailer-three-act-cold-open-build-climax-spec.md # Structuring Act 1 World, Act 2 Turn, Act 3 Montage + Stinger Button
+│   │   ├── [469] trailer-braam-riser-and-sub-drop-punctuation-grid.md   # Placing acoustic blackout stops and signature percussion hits
+│   │   ├── [470] automotive-and-luxury-commercial-specular-sculpting.md # Power-window car paint rolling highlights and engine exhaust tuning
+│   │   ├── [471] food-and-beverage-tabletop-macro-color-and-sizzle.md   # Enhancing warm appetite hues, water droplets, and hyper-crisp foley
+│   │   └── [472] music-video-lip-sync-multicam-and-performance-energy.md # Syncing 24/30/48/60fps playback takes to master studio audio track
+│   └── digital-first-creator-and-podcast-production/
+│       ├── [473] SKILL.md                                               # Sub-Router: YouTube, Video Podcasts & Vertical Social Engines
+│       ├── [474] youtube-first-30-seconds-hook-and-proof-engineering.md # Eliminating throat-clearing intros to maximize 30-second retention
+│       ├── [475] video-podcast-3-camera-auto-switching-heuristics.md    # Switching to active speaker + cutting to two-shot on shared laughter
+│       ├── [476] vertical-9x16-dynamic-caption-word-highlight-engine.md # Generating active-word karaoke pop captions in center-safe zone
+│       ├── [477] educational-screen-recording-zoom-and-cursor-smooth.md # Keyframing smooth pan-and-zooms to follow UI clicks and code blocks
+│       └── [478] multi-platform-repurposing-1-long-to-15-micro-cuts.md  # Extracting self-contained viral micro-stories from long-form master
+│
+├── 09-skill-master-commands-and-procedures/
+│   ├── [479] SKILL.md                                                   # Department Router: Deterministic Skill Master Command Registry
+│   ├── ingest-and-prep-commands/
+│   │   ├── [480] cmd-ingest-verify-media-hashes.md                      # Command Spec: `VERIFY_MEDIA_HASHES`
+│   │   ├── [481] cmd-ingest-parse-camera-metadata.md                    # Command Spec: `PARSE_CAMERA_METADATA`
+│   │   ├── [482] cmd-ingest-sync-multicam-and-audio.md                  # Command Spec: `SYNC_MULTICAM_AND_AUDIO`
+│   │   ├── [483] cmd-ingest-load-timed-transcript.md                    # Command Spec: `LOAD_TIMED_TRANSCRIPT`
+│   │   ├── [484] cmd-ingest-index-visual-shots.md                       # Command Spec: `INDEX_VISUAL_SHOTS`
+│   │   └── [485] cmd-ingest-build-nle-bin-structure.md                  # Command Spec: `BUILD_NLE_BIN_STRUCTURE`
+│   ├── editorial-commands/
+│   │   ├── [486] cmd-edit-evaluate-and-rank-takes.md                    # Command Spec: `EVALUATE_AND_RANK_TAKES`
+│   │   ├── [487] cmd-edit-disqualify-flawed-takes.md                    # Command Spec: `DISQUALIFY_FLAWED_TAKES`
+│   │   ├── [488] cmd-edit-trim-silent-openers-and-tails.md              # Command Spec: `TRIM_SILENT_OPENERS_AND_TAILS`
+│   │   ├── [489] cmd-edit-generate-paper-edit.md                        # Command Spec: `GENERATE_PAPER_EDIT`
+│   │   ├── [490] cmd-edit-compile-assembly-sequence.md                  # Command Spec: `COMPILE_ASSEMBLY_SEQUENCE`
+│   │   ├── [491] cmd-edit-refine-rough-to-fine-cut.md                   # Command Spec: `REFINE_ROUGH_TO_FINE_CUT`
+│   │   ├── [492] cmd-edit-calculate-jl-split-transitions.md             # Command Spec: `CALCULATE_JL_SPLIT_TRANSITIONS`
+│   │   ├── [493] cmd-edit-verify-murch-six-priorities.md                # Command Spec: `VERIFY_MURCH_SIX_PRIORITIES`
+│   │   ├── [494] cmd-edit-profile-rhythm-and-pacing.md                  # Command Spec: `PROFILE_RHYTHM_AND_PACING`
+│   │   ├── [495] cmd-edit-validate-edl-timecode-monotonicity.md         # Command Spec: `VALIDATE_EDL_TIMECODE_MONOTONICITY`
+│   │   └── [496] cmd-edit-emit-edl-manifest.md                          # Command Spec: `EMIT_EDL_MANIFEST`
+│   ├── color-grading-commands/
+│   │   ├── [497] cmd-color-load-shot-metadata.md                        # Command Spec: `LOAD_SHOT_METADATA`
+│   │   ├── [498] cmd-color-analyze-scopes.md                            # Command Spec: `ANALYZE_SCOPES`
+│   │   ├── [499] cmd-color-build-node-graph.md                          # Command Spec: `BUILD_NODE_GRAPH`
+│   │   ├── [500] cmd-color-set-primary-balance.md                       # Command Spec: `SET_PRIMARY_BALANCE`
+│   │   ├── [501] cmd-color-apply-hsl-qualifier.md                       # Command Spec: `APPLY_HSL_QUALIFIER`
+│   │   ├── [502] cmd-color-shape-tonal-curves.md                        # Command Spec: `SHAPE_TONAL_CURVES`
+│   │   ├── [503] cmd-color-match-to-reference.md                        # Command Spec: `MATCH_TO_REFERENCE`
+│   │   ├── [504] cmd-color-apply-film-look-and-fx.md                    # Command Spec: `APPLY_FILM_LOOK_AND_FX`
+│   │   ├── [505] cmd-color-validate-grade-legal-range.md                # Command Spec: `VALIDATE_GRADE_LEGAL_RANGE`
+│   │   └── [506] cmd-color-emit-grade-spec.md                           # Command Spec: `EMIT_GRADE_SPEC`
+│   ├── subtitle-and-caption-commands/
+│   │   ├── [507] cmd-sub-segment-cues.md                                # Command Spec: `SEGMENT_CUES`
+│   │   ├── [508] cmd-sub-calculate-metrics.md                           # Command Spec: `CALCULATE_METRICS`
+│   │   ├── [509] cmd-sub-condense-high-cps-text.md                      # Command Spec: `CONDENSE_HIGH_CPS_TEXT`
+│   │   ├── [510] cmd-sub-snap-to-shot-changes.md                        # Command Spec: `SNAP_TO_SHOT_CHANGES`
+│   │   ├── [511] cmd-sub-inject-sdh-and-fn-tags.md                      # Command Spec: `INJECT_SDH_AND_FN_TAGS`
+│   │   ├── [512] cmd-sub-enforce-standard.md                            # Command Spec: `ENFORCE_STANDARD`
+│   │   ├── [513] cmd-sub-generate-format.md                             # Command Spec: `GENERATE_FORMAT`
+│   │   └── [514] cmd-sub-emit-compliance-report.md                      # Command Spec: `EMIT_COMPLIANCE_REPORT`
+│   ├── sound-and-mix-commands/
+│   │   ├── [515] cmd-sound-clean-and-level-dialogue.md                  # Command Spec: `CLEAN_AND_LEVEL_DIALOGUE`
+│   │   ├── [516] cmd-sound-synthesize-room-tone-fills.md                # Command Spec: `SYNTHESIZE_ROOM_TONE_FILLS`
+│   │   ├── [517] cmd-sound-spot-foley-and-hard-sfx.md                   # Command Spec: `SPOT_FOLEY_AND_HARD_SFX`
+│   │   ├── [518] cmd-sound-layer-ambience-and-reverb.md                 # Command Spec: `LAYER_AMBIENCE_AND_REVERB`
+│   │   ├── [519] cmd-sound-align-music-and-ducking.md                   # Command Spec: `ALIGN_MUSIC_AND_DUCKING`
+│   │   ├── [520] cmd-sound-calibrate-lufs-and-true-peak.md              # Command Spec: `CALIBRATE_LUFS_AND_TRUE_PEAK`
+│   │   ├── [521] cmd-sound-verify-dme-stem-parity.md                    # Command Spec: `VERIFY_DME_STEM_PARITY`
+│   │   └── [522] cmd-sound-emit-mix-spec.md                             # Command Spec: `EMIT_MIX_SPEC`
+│   └── vfx-and-finishing-commands/
+│       ├── [523] cmd-vfx-relink-and-conform-raw.md                      # Command Spec: `RELINK_AND_CONFORM_RAW`
+│       ├── [524] cmd-vfx-generate-exr-pull-sheet.md                     # Command Spec: `GENERATE_EXR_PULL_SHEET`
+│       ├── [525] cmd-finish-configure-master-codec.md                   # Command Spec: `CONFIGURE_MASTER_CODEC`
+│       ├── [526] cmd-finish-assemble-leaders-and-2pop.md                # Command Spec: `ASSEMBLE_LEADERS_AND_2POP`
+│       ├── [527] cmd-finish-run-automated-qc-gates.md                   # Command Spec: `RUN_AUTOMATED_QC_GATES`
+│       ├── [528] cmd-finish-package-imf-or-dcp.md                       # Command Spec: `PACKAGE_IMF_OR_DCP`
+│       └── [529] cmd-finish-emit-delivery-spec.md                       # Command Spec: `EMIT_DELIVERY_SPEC`
+│
+├── 10-fine-grained-parameter-reference-tables/
+│   ├── [530] SKILL.md                                                   # Department Router: Lookup Tables, Constants & Parameter Matrices
+│   ├── editorial-parameter-tables/
+│   │   ├── [531] param-table-smpte-frame-rates-and-drop-frame-rules.md  # Exact ticks-per-frame and timebase scalars for 23.976–120 fps
+│   │   ├── [532] param-table-pause-duration-classification-thresholds.md # Micro-pause (150ms), Breath (400ms), Dramatic (900ms), Dead (>2000ms)
+│   │   ├── [533] param-table-jl-cut-frame-offset-ranges-by-genre.md     # Standard audio lead/trail frame counts across drama, doc, comedy
+│   │   ├── [534] param-table-dissolve-and-fade-duration-frames.md       # Soft cut (4f), Standard dissolve (24f), Slow passage of time (72f)
+│   │   ├── [535] param-table-average-shot-length-benchmarks-by-era.md   # ASL reference benchmarks across genres and tempo targets
+│   │   ├── [536] param-table-camera-angle-and-scale-jump-thresholds.md  # Focal length delta (mm) and angular displacement (°) matrices
+│   │   ├── [537] param-table-cmx3600-wipe-and-transition-codes.md       # Complete CMX 3600 `C`, `D`, `W001`–`W999` & `K` key transition codes
+│   │   └── [538] param-table-nle-keyboard-and-api-operation-mappings.md # Mapping trim/slip/slide/roll/ripple operations to Resolve/Premiere/Avid
+│   ├── color-grading-parameter-tables/
+│   │   ├── [539] param-table-camera-log-middle-grey-ire-values.md       # 18% grey IRE in LogC3 (39%), LogC4 (28%), S-Log3 (41%), Log3G10 (33%)
+│   │   ├── [540] param-table-color-space-primaries-xy-coordinates.md    # Red/Green/Blue/White CIE xy coordinates for Rec.709, P3, Rec.2020, AP0, AP1
+│   │   ├── [541] param-table-skin-tone-ire-and-vectorscope-angles.md    # Fitzpatrick Scale I–VI IRE exposure ranges and vectorscope saturation bounds
+│   │   ├── [542] param-table-kelvin-color-temperature-to-rgb-offsets.md # 1800K Candlelight to 10000K Blue Sky RGB gain/offset compensation values
+│   │   ├── [543] param-table-printer-lights-to-linear-gain-conversion.md # Converting 1–50 Printer Light points to exact RGB multiplier ratios
+│   │   ├── [544] param-table-hsl-qualifier-six-vector-hue-centers.md    # Red, Yellow, Green, Cyan, Blue, Magenta exact degree centers and widths
+│   │   ├── [545] param-table-film-stock-contrast-and-grain-profiles.md  # Numerical toe/shoulder slopes and grain micron sizes for 12 film stocks
+│   │   ├── [546] param-table-halation-and-bloom-radius-by-resolution.md # Scaling blur pixel radii from 1080p (1.0x) to 4K (2.0x) and 8K (4.0x)
+│   │   ├── [547] param-table-hdr-nit-zones-for-pq-and-hlg.md            # Diffuse white (203 nits PQ), Skin (70–120 nits), Specular (400–1000 nits)
+│   │   └── [548] param-table-legal- vs-full-data-code-value-ranges.md   # 8-bit (16–235), 10-bit (64–940), 12-bit (256–3760) legal vs full bounds
+│   ├── audio-and-mixing-parameter-tables/
+│   │   ├── [549] param-table-vocal-frequency-bands-and-eq-targets.md    # Plosive (<100Hz), Mud (250Hz), Box (500Hz), Presence (3kHz), Sibilance (7kHz)
+│   │   ├── [550] param-table-compressor-attack-release-ratio-presets.md # Exact ms and ratio settings for DX Peak, DX Leveler, MX Glue, FX Smash
+│   │   ├── [551] param-table-reverb-rt60-decay-and-predelay-by-room.md  # RT60 (0.2s Closet to 4.5s Cathedral) and Pre-Delay (5ms to 65ms) matrices
+│   │   ├── [552] param-table-foley-and-sfx-db-relative-mix-levels.md    # Typical dBFS placement of footsteps, cloth, impacts, and beds below DX
+│   │   ├── [553] param-table-platform-lufs-lra-and-dbtp-targets.md      # Master comparison matrix across 18 global broadcast and streaming specs
+│   │   ├── [554] param-table-surround-and-atmos-speaker-angles-itu.md   # ITU-R BS.2051 speaker azimuth and elevation angles for 5.1, 7.1, 7.1.4
+│   │   ├── [555] param-table-electrical-mains-hum-frequencies-by-country.md # 50 Hz vs 60 Hz regional grid and harmonic series up to 1000 Hz
+│   │   └── [556] param-table-sample-rate-and-bit-depth-data-rates.md    # Uncompressed PCM bitrates for 16/24/32-bit float across 44.1–192 kHz
+│   ├── subtitling-and-localization-parameter-tables/
+│   │   ├── [557] param-table-cps-and-cpl-limits- across-40-languages.md # Language-by-language adult/child CPS and single/double-byte CPL limits
+│   │   ├── [558] param-table-shot-change-frame-snapping-zones-by-fps.md # Exact frame counts for dead zones across 23.976, 24, 25, 29.97, 50, 59.94
+│   │   ├── [559] param-table-iso-639-1-and-bcp-47-language-tags.md      # Standardized language and regional script tags (`es-419`, `pt-BR`, `zh-Hans`)
+│   │   ├── [560] param-table-cea-608-control-codes-and-grid-coords.md   # 32x15 character grid row/column pac-codes and control byte hex pairs
+│   │   └── [561] param-table-imsc1-ttml-styling-and-region-attributes.md # Complete W3C TTML2/IMSC1.1 namespace and `tts:` styling attribute index
+│   └── finishing-and-codec-parameter-tables/
+│       ├── [562] param-table-prores-dnxhr-xavc-bitrate-by-raster-fps.md # Exact Mbps and GB-per-hour storage footprints for all mezzanine codecs
+│       ├── [563] param-table-standard-cinema-and-tv-aspect-ratios.md    # Exact active pixel dimensions for 1.33, 1.66, 1.78, 1.85, 2.00, 2.20, 2.39
+│       ├── [564] param-table-nclc-colr-atom-integer-triplets.md         # Complete ISO/IEC 23091-2 ColourPrimaries, TransferCharacteristics, Matrix
+│       └── [565] param-table-qc-error-severity-classification-codes.md  # Mapping 100+ QC anomalies to Reject (Blocker), Warn (Fix), or Info (Note)
+│
+├── 11-deterministic-validation-and-calculation-specs/
+│   ├── [566] SKILL.md                                                   # Department Router: Algorithmic Validators & Verification Logic
+│   ├── edl-and-timeline-validators/
+│   │   ├── [567] validator-edl-schema-and-required-fields.md            # Checking 100% presence of `selection_rationale` and valid TC strings
+│   │   ├── [568] validator-edl-record-timecode-continuity.md            # Verifying `clip[i].record_out == clip[i+1].record_in` across sequence
+│   │   ├── [569] validator-edl-source-in-out-duration-parity.md         # Verifying `(source_out - source_in) * speed == (record_out - record_in)`
+│   │   ├── [570] validator-edl-transition-handle-sufficiency.md         # Checking source clip bounds support requested J/L and dissolve frames
+│   │   ├── [571] validator-edl-no-duplicate-adjacent-frames.md          # Detecting accidental back-to-back match-frame jump cuts on same clip
+│   │   └── [572] validator-edl-stage-gate-readiness.md                  # Verifying all stage-specific criteria pass before advancing edit stage
+│   ├── color-grade-validators/
+│   │   ├── [573] validator-grade-schema-and-scope-evidence.md           # Rejecting any grade spec lacking numeric IRE/vectorscope readings
+│   │   ├── [574] validator-grade-lift-gamma-gain-bounds.md              # Verifying RGB lift/gamma/gain offsets stay within physically sane bounds
+│   │   ├── [575] validator-grade-node-graph-topological-order.md        # Ensuring Input CST is Node 1 and Output CST + Legal Limiter is final node
+│   │   ├── [576] validator-grade-skin-tone-vector-tolerance.md          # Checking skin qualifier output lands within ±4° of vectorscope I-line
+│   │   ├── [577] validator-grade-sdr-hdr-legal-ire-compliance.md        # Verifying black_point_ire >= 0 and white_point_ire <= 100 (or nit cap)
+│   │   └── [578] validator-grade-shot-match-delta-convergence.md        # Verifying matched shot falls within ±2 IRE and ±2% RGB balance of hero
+│   ├── subtitle-and-caption-validators/
+│   │   ├── [579] validator-subtitle-schema-and-cue-index-order.md       # Verifying sequential numbering and non-overlapping monotonic cue times
+│   │   ├── [580] validator-subtitle-cps-and-cpl-hard-ceilings.md        # Flagging every cue where `cps > limit` or `cpl > limit`
+│   │   ├── [581] validator-subtitle-duration-floor-and-ceiling.md       # Flagging cues < 833ms or > 7000ms and inter-cue gaps < 2 frames
+│   │   ├── [582] validator-subtitle-shot-change-dead-zone-audit.md      # Cross-checking every cue in/out timestamp against EDL cut points
+│   │   ├── [583] validator-subtitle-orphan-words-and-tag-balance.md     # Checking unclosed `<i>` tags, double spaces, and 1-word bottom lines
+│   │   └── [584] validator-subtitle-sdh-and-fn-completeness.md          # Verifying all foreign dialogue and plot audio cues have timed entries
+│   ├── sound-and-mix-validators/
+│   │   ├── [585] validator-mix-schema-and-stem-completeness.md          # Ensuring DX, MX, FX stems and loudness standard are explicitly declared
+│   │   ├── [586] validator-mix-integrated-lufs-and-dbtp-bounds.md       # Verifying target LUFS matches platform spec and True Peak <= ceiling
+│   │   ├── [587] validator-mix-dialogue-room-tone-continuity.md         # Ensuring zero dead-digital-zero (`-inf dBFS`) gaps exist on DX track
+│   │   ├── [588] validator-mix-music-ducking-clearance.md               # Verifying music ducks >= 6 dB whenever dialogue is active
+│   │   └── [589] validator-mix-sfx-timecode-to-edl-sync.md              # Cross-referencing Foley/SFX cue timecodes against EDL visual events
+│   └── master-delivery-and-qc-validators/
+│       ├── [590] validator-delivery-spec-cross-artifact-consistency.md  # Checking FPS, Resolution, Color Space & Runtime match across Files A–E
+│       ├── [591] validator-leader-2pop-and-ffoa-frame-exactness.md      # Verifying 2-pop at 00:59:58:00 and FFOA at 01:00:00:00
+│       └── [592] validator-master-qc-all-gates-green-signoff.md         # Master release blocker: halts delivery if any QC gate status == `fail`
+│
+├── 12-nle-and-daw-automation-bridge-adapters/
+│   ├── [593] SKILL.md                                                   # Department Router: Resolve, Premiere, Avid, FCP, Pro Tools & Nuke Bridges
+│   ├── davinci-resolve-scripting-adapters/
+│   │   ├── [594] adapter-resolve-python-lua-project-and-media-pool.md   # Driving `DaVinciResolveScript` MediaPool, Folder, and Timeline APIs
+│   │   ├── [595] adapter-resolve-timeline-assembly-from-json-edl.md     # Executing `AppendToTimeline` with frame-exact startFrame/endFrame
+│   │   ├── [596] adapter-resolve-color-node-graph-and-cdl-injector.md   # Applying CDL Slope/Offset/Power/Sat and DRX grades via Resolve API
+│   │   ├── [597] adapter-resolve-render-queue-and-preset-executor.md    # Automating Deliver page render jobs, codecs, and filename tokens
+│   │   └── [598] adapter-resolve-fairlight-audio-track-and-lufs.md      # Automating Fairlight track layouts, buses, and loudness normalization
+│   ├── adobe-premiere-and-after-effects-adapters/
+│   │   ├── [599] adapter-premiere-extendscript-uxp-sequence-builder.md  # Building Premiere `qe.project` and `app.project.sequences` from EDL
+│   │   ├── [600] adapter-premiere-lumetri-color-parameter-mapper.md     # Mapping Grade Spec JSON values to Lumetri Color intrinsic component
+│   │   ├── [601] adapter-premiere-essential-graphics-mogrt-injector.md  # Populating `.mogrt` lower-third text and timing parameters via script
+│   │   └── [602] adapter-after-effects-aerender-vfx-comp-automator.md   # Driving headless `aerender` comps from VFX turnover pull sheets
+│   ├── avid-media-composer-and-pro-tools-adapters/
+│   │   ├── [603] adapter-avid-ale-avid-log-exchange-generator.md        # Generating tab-delimited `.ale` files with Heading, Column, and Data
+│   │   ├── [604] adapter-avid-subcap-ds-caption-file-generator.md       # Generating Avid `.txt` SubCap timed blocks from Subtitle Engine
+│   │   ├── [605] adapter-pro-tools-ptsl-scripting-sdk-session-setup.md  # Automating Pro Tools track creation, AAF import, and stem bounce via PTSL
+│   │   └── [606] adapter-pro-tools-clip-gain-and-eq3-automation.md      # Mapping Dialogue Edit Spec into Pro Tools clip-gain breakpoints
+│   └── ffmpeg-and-command-line-media-adapters/
+│       ├── [607] adapter-ffmpeg-frame-accurate-proxy-and-burnin.md      # Generating `drawtext` timecode burn-in and LUT3D filtergraphs
+│       ├── [608] adapter-ffmpeg-ebur128-loudness-two-pass-normalizer.md # Running `ebur128` analysis pass + `loudnorm` linear/dynamic execution
+│       ├── [609] adapter-ffmpeg-blackdetect-freezedetect-silencedetect.md # Extracting machine-readable QC anomaly timestamps via libavfilter
+│       └── [610] adapter-openeffects-ofx-and-ociocheck-cli-bridge.md    # Running OpenColorIO `ociocheck` and `ociobakelut` verification
+│
+├── 13-production-grade-golden-examples-and-templates/
+│   ├── [611] SKILL.md                                                   # Department Router: Golden Reference Artifacts & Few-Shot Exemplars
+│   ├── golden-edl-and-editorial-examples/
+│   │   ├── [612] example-edl-narrative-dialogue-scene-assembly.md       # Complete File A exemplar: 2-person dramatic scene Assembly Cut
+│   │   ├── [613] example-edl-narrative-dialogue-scene-fine-cut.md       # Complete File A exemplar: Tightened Fine Cut with J/L splits & rationale
+│   │   ├── [614] example-edl-documentary-interview-plus-broll.md        # Complete File A exemplar: Frankenbite interview with B-roll counterpoint
+│   │   ├── [615] example-edl-high-tempo-30s-commercial-spot.md          # Complete File A exemplar: Beat-synced 30-second commercial cut manifest
+│   │   ├── [616] example-edl-action-sequence-exponential-pacing.md      # Complete File A exemplar: Accelerating ASL action sequence with match cuts
+│   │   └── [617] example-paper-edit-transcript-to-cut-walkthrough.md    # Raw transcript -> Candidate evaluation -> Disqualification -> Final EDL
+│   ├── golden-color-grading-examples/
+│   │   ├── [618] example-grade-spec-arri-logc4-to-rec709-day-ext.md     # Complete File B exemplar: 12-node grade for sunlit exterior hero shot
+│   │   ├── [619] example-grade-spec-red-r3d-to-dolby-vision-night-int.md # Complete File B exemplar: Low-key moody tungsten interior in HDR PQ
+│   │   ├── [620] example-grade-spec-sony-slog3-mixed-lighting-rescue.md # Complete File B exemplar: Neutralizing fluorescent office green spike
+│   │   ├── [621] example-grade-spec-b-cam-shot-matched-to-a-cam-hero.md # Complete File B exemplar: Scope-driven A/B camera shot matching
+│   │   └── [622] example-grade-spec-kodak-2383-halation-grain-look.md   # Complete File B exemplar: Photochemical print emulation with halation
+│   ├── golden-subtitle-and-caption-examples/
+│   │   ├── [623] example-subtitle-netflix-en-sdh-srt-and-audit.md       # Complete File C exemplar: Netflix 20 CPS / 42 CPL SDH `.srt` + JSON audit
+│   │   ├── [624] example-subtitle-bbc-broadcast-37-cpl-vtt-and-audit.md # Complete File C exemplar: BBC 37 CPL / 160 WPM `.vtt` + compliance report
+│   │   ├── [625] example-subtitle-imsc1-ttml-with-top-an8-tags.md       # Complete File C exemplar: W3C IMSC1.1 XML with forced narratives & `{an8}`
+│   │   └── [626] example-subtitle-cps-violation-before-and-after-fix.md # Walkthrough of condensing a 28.4 CPS cue down to 16.8 CPS cleanly
+│   ├── golden-sound-and-mix-examples/
+│   │   ├── [627] example-mix-spec-dialogue-cleanup-and-foley-scene.md   # Complete File D exemplar: Dramatic scene DX cleanup, Foley, and -27 LKFS
+│   │   ├── [628] example-mix-spec-broadcast-doc-ebu-r128-23-lufs.md     # Complete File D exemplar: Documentary mix with music ducking at -23 LUFS
+│   │   └── [629] example-mix-spec-trailer-high-impact-stems-and-lfe.md  # Complete File D exemplar: Trailer DME stem breakdown and LFE hits
+│   └── golden-delivery-and-full-pipeline-examples/
+│       ├── [630] example-delivery-spec-netflix-uhd-hdr-imf-master.md    # Complete File E exemplar: Full Netflix UHD HDR Atmos delivery spec sheet
+│       ├── [631] example-delivery-spec-theatrical-4k-dcp-master.md      # Complete File E exemplar: Theatrical SMPTE 4K DCP & QC gate sign-off
+│       ├── [632] example-delivery-spec-social-9x16-multi-platform.md    # Complete File E exemplar: 9:16 vertical social master & QC checklist
+│       └── [633] example-end-to-end-full-post-pipeline-bundle.md        # Synchronized 5-artifact bundle (Files A, B, C, D, E) for a single scene
+│
+└── 14-edge-cases-troubleshooting-and-recovery-protocols/
+    ├── [634] SKILL.md                                                   # Department Router: Edge-Case Recovery & Anomaly Remediation
+    ├── editorial-edge-cases/
+    │   ├── [635] edge-case-zero-clean-takes-all-takes-flawed-rescue.md  # Assembling a clean line when every single take has a stumble or noise
+    │   ├── [636] edge-case-missing-script-coverage-cutaway-bridge.md    # Bridging narrative gaps when camera never rolled on a key transition
+    │   ├── [637] edge-case-improvised-overlapping-ensemble-dialogue.md  # Cutting multi-mic cross-talk where speakers interrupt with zero gaps
+    │   ├── [638] edge-case-variable-frame-rate-vfr-smartphone-media.md  # Normalizing iPhone/Android VFR footage to constant frame rate (CFR)
+    │   ├── [639] edge-case-screen-direction-flip-axis-repair.md         # Using neutral frontal cutaways or horizontal flop to fix 180° errors
+    │   ├── [640] edge-case-mismatched-actor-energy-across-takes.md      # Bridging whisper-to-shout continuity gaps across spliced takes
+    │   ├── [641] edge-case-extreme-runtime-cutdown-60min-to-30min.md    # Combining subplots and eliminating B-stories without breaking A-plot
+    │   ├── [642] edge-case-corrupted-timecode-00-00-00-00-reset-clips.md # Disambiguating duplicate `00:00:00:00` timecodes across multiple cards
+    │   ├── [643] edge-case-audio-only-interview-visual-reconstruction.md # Building compelling visual sequences when only audio recorder survived
+    │   └── [644] edge-case-late-music-replacement-re-cutting-locked-pic.md # Micro-slipping cuts inside locked scene duration when temp music fails clearance
+    ├── color-grading-edge-cases/
+    │   ├── [645] edge-case-clipped-8bit-rec709-highlight-reconstruction.md # Softening flat-topped 8-bit blown skies via luma key gradient roll-off
+    │   ├── [646] edge-case-severe-underexposure-noisy-shadow-recovery.md # Chroma-only temporal NR + blue-channel suppression in 4-stop underexposed shots
+    │   ├── [647] edge-case-blue-led-concert-and-club-gamut-clipping.md  # Fixing neon blue/magenta matrix overflow via ACES gamut compression
+    │   ├── [648] edge-case-sunburn-and-blotchy-skin-complexion-repair.md # Dual-qualifier hue rotation to unify red noses/ears with facial skin
+    │   ├── [649] edge-case-matching-8bit-gopro-iphone-to-arri-alexa.md  # Halation, highlight roll-off, and grain synthesis to disguise small sensors
+    │   ├── [650] edge-case-flickering-hmis-and-high-speed-strobing.md   # Deflicker temporal window math for 120fps shots under 50Hz/60Hz lights
+    │   ├── [651] edge-case-eyeglass-green-anti-reflective-glare-fix.md  # Tracked micro-window magenta/red tint counter-balance on lens reflections
+    │   ├── [652] edge-case-daylight-shift-through-sheer-curtains.md     # Keyframing dynamic white balance and exposure across 3-minute one-ers
+    │   ├── [653] edge-case-baked-in-wrong-lut-inverse-lut-recovery.md   # Constructing tetrahedral inverse transform when LUT was baked in camera
+    │   └── [654] edge-case-banding-in-dark-gradients-dither-injection.md # Injecting 10-bit triangular PDF dither and fine grain to break sky banding
+    ├── sound-and-mix-edge-cases/
+    │   ├── [655] edge-case-wind-buffeting-on-lavalier-spectral-rescue.md # Dynamic low-shelf cut + harmonic synthesis when wind overwhelms capsule
+    │   ├── [656] edge-case-generator-and-drone-rotor-harmonic-removal.md # Tracking pitch-drifting drone/generator whine with adaptive notch banks
+    │   ├── [657] edge-case-overlapping-dialogue-on-single-boom-track.md # Stem separation and dynamic EQ when one actor shouts over another's whisper
+    │   ├── [658] edge-case-missing-production-audio-full-futz-and-adr.md # Rebuilding an entire scene from scratch with ADR, Foley, and worldized BG
+    │   ├── [659] edge-case-phase-cancellation-in-dual-mic-interviews.md # Auto-delay alignment and dynamic automixer gating for 2-person shoots
+    │   ├── [660] edge-case-sibilance-harshness-on-bright-condensers.md  # Split-band de-essing at 5.5 kHz and 8.5 kHz without causing a lisp
+    │   ├── [661] edge-case-music-track-clashing-with-vocal-fundamental.md # Mid-Side (M/S) EQ carving center vocal pocket while keeping stereo sides wide
+    │   ├── [662] edge-case-extreme-dynamic-range-whisper-to-explosion.md # Meeting -24 LKFS broadcast spec without crushing explosion impact
+    │   ├── [663] edge-case-reverb-tail-cutoff-at-abrupt-dialogue-edit.md # Worldizing a matching convolution reverb tail to mask hard dialogue cuts
+    │   └── [664] edge-case-sample-rate-44100-to-48000-pitch-shift-bug.md # Diagnosing and fixing 8.8% speed/pitch errors from unflagged 44.1 kHz imports
+    ├── subtitling-and-caption-edge-cases/
+    │   ├── [665] edge-case-rapid-fire-auctioneer-and-overlapping-speech.md # Aggressive condensation heuristics when raw speech exceeds 35 CPS
+    │   ├── [666] edge-case-subtitling-over-dense-on-screen-infographics.md # Dynamic cue timing and coordinate shifting around full-screen graphics
+    │   ├── [667] edge-case-bilingual-scenes-with-partial-translations.md # Distinguishing native dialogue, expected-untranslated lines, and FN cues
+    │   ├── [668] edge-case-poetry-song-lyrics-and-rhyme-preservation.md # Balancing musical meter and rhyme against strict CPS/CPL bounds
+    │   ├── [669] edge-case-subtitling-across-rapid-10-frame-montages.md # Bridging single cues across micro-cuts when shot duration < 833ms floor
+    │   ├── [670] edge-case-stuttered-and-interrupted-character-speech.md # Representing character disfluency (`I-I-I can't`) without inflating CPS
+    │   ├── [671] edge-case-timecode-offset-between-00-and-01-hour-masters.md # Recalculating entire subtitle file offsets when FFOA shifts from 00 to 01
+    │   └── [672] edge-case-frame-rate-drift-23976-srt-on-24000-master.md # Scaling every cue timestamp by `1000/1001` factor to cure progressive drift
+    ├── vfx-conform-and-finishing-edge-cases/
+    │   ├── [673] edge-case-mixed-frame-rate-timeline-24-25-30-60-conform.md # Resolving motion cadence artifacts in multi-framerate documentary timelines
+    │   ├── [674] edge-case-interlaced-1080i-archival-in-24p-progressive.md # Field-order dominance detection (Upper vs Lower) and QTGMC deinterlacing
+    │   ├── [675] edge-case-missing-camera-raw-clip-offline-proxy-upres.md # Emergency detail-preserving upres and de-artifacting when raw is lost
+    │   ├── [676] edge-case-vfx-plate-color-space-mismatch-linear-vs-log.md # Diagnosing double-LUT or un-linearized EXR returns from VFX vendors
+    │   ├── [677] edge-case-alpha-premultiplication-black-halo-on-titles.md # Fixing Unpremultiply -> Grade -> Premultiply order on graphic overlays
+    │   ├── [678] edge-case-pse-harding-flash-test-failure-remediation.md # Targeted temporal luma dampening to pass UK/Japan epilepsy flash gates
+    │   ├── [679] edge-case-quicktime-gamma-shift-mac-vs-windows-players.md # Reconciling Apple ColorSync 1.96 gamma vs Rec.709 2.4 reference monitors
+    │   └── [680] edge-case-imf-supplemental-package-uuid-broken-link.md # Rebuilding broken PKL/CPL asset UUID references without full re-encode
+    └── system-orchestration-and-meta-skills/
+        ├── [681] SKILL.md                                               # Sub-Router: Meta-Verification, Batch Execution & Pipeline Telemetry
+        ├── [682] meta-skill-prompt-intent-deconstruction-parser.md      # Parsing ambiguous user requests into concrete post-production sub-tasks
+        ├── [683] meta-skill-minimal-sub-skill-context-loader.md         # Loading only the exact 3–8 `.md` files needed per task to save context
+        ├── [684] meta-skill-missing-input-parameter-inference-protocol.md # Inferring safe studio defaults (e.g. 24fps, Rec.709, -24 LKFS) when omitted
+        ├── [685] meta-skill-multi-department-sequential-execution-dag.md # Executing Ingest -> Edit -> Color -> Sound -> Sub -> Finish DAG
+        ├── [686] meta-skill-parallel-shot-and-cue-batch-processor.md    # Chunking 500-shot timelines or 1200-cue SRTs into lossless batches
+        ├── [687] meta-skill-cross-artifact-timecode-hash-synchronizer.md # Locking a cryptographic timeline hash across EDL, Grade, Mix, and SRT
+        ├── [688] meta-skill-anti-hallucination-evidence-citation-auditor.md # Scanning agent drafts to strip un-scoped claims ("warm LUT") before emit
+        ├── [689] meta-skill-schema-json-syntax-and-type-enforcer.md     # Enforcing strict RFC 8259 JSON compliance on all emitted artifacts
+        ├── [690] meta-skill-human-review-diff-summary-generator.md      # Generating executive deltas between v001 and v002 of any post artifact
+        ├── [691] meta-skill-cost-and-compute-estimation-calculator.md   # Estimating storage GB, render hours, and VFX pull counts from an EDL
+        ├── [692] meta-skill-nle-roundtrip-import-instructions-writer.md # Writing step-by-step operator import guides for Resolve/Premiere/Avid
+        ├── [693] meta-skill-automated-regression-test-suite-runner.md   # Testing all 720 skills against synthetic corrupt inputs
+        ├── [694] meta-skill-custom-studio-house-style-override-loader.md # Injecting client-specific LUTs, CPL limits, or loudness overrides
+        ├── [695] meta-skill-episodic-series-bible-consistency-tracker.md # Maintaining character skin vectors, LUFS, and font continuity across episodes
+        ├── [696] meta-skill-live-dailies-to-rough-cut-streaming-loop.md # Incremental assembly updates as new camera cards land from set
+        ├── [697] meta-skill-localization-multi-language-fanout-engine.md # Spawning 30 parallel language subtitle/dubbing specs from locked master
+        ├── [698] meta-skill-archival-cold-storage-package-bundler.md    # Bundling locked project files, trim RAWs, DME stems, and textless masters
+        ├── [699] meta-skill-post-mortem-pipeline-telemetry-reporter.md  # Logging take rejection ratios, average CPS, and QC gate pass rates
+        ├── [700] meta-skill-zero-footage-script-to-previz-edl-bridge.md # Generating synthetic pre-production timing EDLs before cameras roll
+        ├── [701] meta-skill-audio-description-ad-blind-accessibility.md # Spotting and scripting secondary audio narration tracks in dialogue gaps
+        ├── [702] meta-skill-textless-master-element-generation-spec.md  # Appending clean textless backgrounds at tail of master for localization
+        ├── [703] meta-skill-censorship-and-airline-edit-compliance.md   # Generating dual-branch EDLs and audio bleeps/mutes for airline/TV edits
+        ├── [704] meta-skill-trailer-and-promo-stem-pull-packager.md     # Packaging isolated clean dialogue lines, hits, and toolkit stems for marketing
+        ├── [705] meta-skill-frame-io-and-pix-timecoded-comment-ingester.md # Parsing exported CSV/JSON review markers into actionable edit tasks
+        ├── [706] meta-skill-music-licensing-temp-love-replacement-guide.md # Matching acoustic BPM, key, and energy curve of expensive temp tracks
+        ├── [707] meta-skill-stock-footage-edl-usage-and-per-second-audit.md # Calculating exact frame/second usage per vendor clip for licensing buyout
+        ├── [708] meta-skill-vfx-bid-complexity-tier-classifier.md       # Classifying VFX pulls into Tier 1 (Paint) to Tier 5 (Full CG) for bidding
+        ├── [709] meta-skill-color-blindness-deuteranopia-accessibility.md # Auditing key graphic overlays and color-coded storytelling for CVD safety
+        ├── [710] meta-skill-hdr-to-sdr-automatic-trim-validation.md     # Verifying 100-nit SDR fold-down retains highlight separation and saturation
+        ├── [711] meta-skill-atmos-to-stereo-folddown-dialogue-clarity.md # Ensuring 7.1.4 spatial mixes retain +3 dB dialogue intelligibility on TV speakers
+        ├── [712] meta-skill-deepfake-and-neural-lip-resync-governance.md # Technical and ethical gates for visual vubbing / neural lip modification
+        ├── [713] meta-skill-c2pa-content-authenticity-cryptographic-sign.md # Embedding C2PA provenance manifests into final exported masters
+        ├── [714] meta-skill-final-deliverable-package-zip-and-manifest.md # Packaging Files A, B, C, D, and E into a single verified turnover bundle
+        ├── [715] meta-skill-agent-self-critique-and-depth-enforcement.md # Pre-output gate rejecting any generic prose lacking numerical parameters
+        ├── [716] meta-skill-token-budget-and-chunked-artifact-streamer.md # Streaming multi-thousand-line EDLs and SRTs across deterministic chunks
+        ├── [717] meta-skill-legacy-project-migration-fcp7-to-otio.md    # Upgrading decade-old XML/EDL archives into modern schema-locked artifacts
+        ├── [718] meta-skill-live-broadcast-evs-and-replay-cut-protocol.md # Fast-turnaround highlight and melt-reel assembly heuristics
+        ├── [719] meta-skill-immersive-apple-vision-pro-mv-hevc-stereoscopic.md # Stereoscopic convergence, interaxial disparity, and spatial audio specs
+        └── [720] meta-skill-master-monorepo-integrity-and-index-lock.md # Final self-check verifying all 720 `.md` files resolve with zero broken links

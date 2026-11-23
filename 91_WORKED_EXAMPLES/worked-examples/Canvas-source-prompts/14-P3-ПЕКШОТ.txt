@@ -1,0 +1,35 @@
+A 4-second live-action packshot, 16:9, the last shot of the commercial. The attic flat at dusk, the Higgos delivery on the coffee table, and the cat eating on the rug.
+
+REFERENCES
+@prop_pack — the red ribbed kraft Higgos bag and the red two-cup holder with two white lidded cups: exact colour, ribbing, proportions and white lettering.
+@char_cat — the grey-and-white long-haired cat with the white chest bib and pale green eyes. Ignore the studio backdrop.
+@char_alex2 — Alex: curly dark hair, oversized red-and-white check shirt over a white long-sleeve. Background only.
+@char_jenny — Jenny: cream knit beanie with the cream hoodie's hood worn over it, round black glasses, long black hair. Beanie and hood on even out of focus. Background only.
+@char_mika — Mika: strawberry-blonde bun, tortoiseshell glasses, cropped denim jacket. No freckles. Background only.
+@loc_flat2 — attic living room at dusk: mustard sofa, mustard armchair, wooden coffee table, teal-blue beanbag, patterned rug, record shelves with fairy lights, pendant and red column lamp. Geometry only.
+
+LOOK
+Clean modern digital cinema look, 35mm anamorphic, 24mm: rich saturated colour, deep clean blacks, punchy contrast, crisp detail — no faded film look, no lifted blacks, no haze, no halation, no noticeable grain. Dusk: warm saturated pendant and lamp light, cold blue in the skylights. The red of the pack is the strongest, most saturated colour in the frame.
+
+WHAT IS BEHIND EACH OF THEM
+Behind JENNY the record shelves with fairy lights; behind MIKA the tilted skylights with blue dusk and the sofa back; behind ALEX the red column lamp and the floorboards.
+
+WHO IS WHERE
+From the open side of the room facing the sofa: Jenny in the mustard armchair at screen left, beanie and hood on; Mika on the mustard sofa in the centre; Alex on the teal-blue beanbag at screen right. All three are eating quietly and stay soft in the background the whole time. The coffee table with the pack is in front of them. @char_cat is on the rug on the floor in front of the table, with a food bowl: the bowl in the left third of the frame, the cat in the right third, eating from it.
+
+THE SHOT — one continuous move, 0.0–4.0s
+Opens tight on the pack: two @prop_pack bags standing side by side on the coffee table with the two-cup holder beside them, printed sides to camera, in sharp focus. BACKGROUND, soft: the mustard sofa with Mika, the record shelves with fairy lights, the tilted skylights with blue dusk; as the camera drops, the armchair with Jenny at left and the beanbag with Alex at right come into the soft background. Immediately the camera pulls back fast and drops toward the floor, and focus racks once from the pack to the cat — only these two focus states, no separate focus on the friends. By 1.5s the camera has settled low at rug level: the cat in the right third, its bowl in the left third, the coffee table with the pack above and behind, the three friends soft beyond. From 1.5s to 4.0s the cat eats: it lowers its head into the bowl, the kibble shifts and scatters when its muzzle touches it, pieces are taken and vanish into its mouth, it chews and goes back for more. The food visibly moves and disappears — it is not a still image. The pack stays readable in the frame throughout.
+
+SOUND
+No music, no effects. Room tone only, and the small dry sound of the cat eating. The three friends do not speak and do not move their lips in sync with the narrator.
+Voice-over: a separate male voice, a low warm baritone, clean close professional studio recording on a Neumann U 87 Ai — dry, no echo, no noise; no microphone in frame. Read fast, joined-up and clear — the low timbre does not mean a slow or solemn delivery. It starts on the very first frame and does not wait for the cat or the focus rack:
+0.00–0.45s: "Higgos."
+0.45–2.60s: "From anywhere to your door."
+All speech is finished by 2.8s at the latest. No long pause after "Higgos" despite the full stop. "Higgos" is two syllables with a clear, full O at the end — never shortened to "Higgs". Nothing else is spoken, and no pronunciation hint is read aloud.
+
+KEEP CONSISTENT
+Faces and clothes as the references; Jenny's beanie and hood on; Mika without freckles.
+The pack as @prop_pack, two bags and one cup holder.
+The cat is the only thing in focus after the rack; it eats for the last 2.5 seconds and the kibble moves.
+Colour stays rich and saturated — never washed out, faded or pastel.
+No subtitles, no on-screen text.

@@ -1,0 +1,27 @@
+Generate a NEW three-panel character reference sheet of the exact same young woman as in the attached image. The attachment defines her FACE, her exact smile, her eyeglasses, her hair and the COLOR of her denim jacket. Ignore the rest of its clothing — the white tee and blue jeans are replaced as described below. A real photograph, documentary-grade realism. Three panels side by side in one horizontal row with thin divider lines, 16:9 sheet.
+
+MANDATORY color rendering, highest priority: a clean modern digital photograph with NEUTRAL white balance and true-to-life natural colors. No sepia, no warm amber cast, no film emulation, no vintage filter, no film grain, no LUT look. Whites read as clean white, greys as neutral grey, skin tones natural. Crisp, clear, unfiltered.
+
+Identity lock, highest priority, identical in all panels: her exact face from the reference — same face geometry and proportions, she is 22 years old, fair skin with a light natural flush and faint freckles, warm brown eyes, full soft eyebrows, defined elegant cheekbones, small gold hoop earrings. Her EXACT smile from the reference: a cute, warm, genuine closed-to-slightly-open smile, corners lifted, softly smiling eyes, friendly and a little playful. Her EXACT eyeglasses from the reference: narrow oval lenses in a thin dark tortoiseshell frame, fully clear transparent lenses, eyes clearly visible through them. Do not reshape, slim, age, symmetrize or beautify.
+
+Body, same in all panels: a very slender petite figure, about 45 kg — delicate thin frame, slim arms and legs, narrow waist, graceful and healthy-looking, natural proportions.
+
+Hair, same in all panels, as in the reference: ginger-red hair swept up into a loose messy high bun with soft volume, wispy strands at the forehead and temples, a few loose face-framing strands at the neck.
+
+Wardrobe, same in all panels:
+- her denim jacket from the reference, SAME classic medium-blue wash and same cropped cut: hem ending at the natural waist, neat fit on her slim frame, spread collar, silver metal buttons down the front worn open, chest flap pockets, fitted sleeves with buttoned cuffs
+- underneath, REPLACING the reference's white tee: a fitted white cami top with a delicate lace-trimmed hem, snug on the torso, a sliver of midriff showing between top and waistband
+- a thin gold pendant necklace
+- REPLACING the reference's blue jeans: high-waisted straight-leg jeans in clean WHITE denim, fitted at the waist, relaxed straight fall through the leg
+- simple white leather sneakers, clean minimal design
+- NO bag, no satchel, no sunglasses, no phone, empty hands
+
+Panels:
+- Left, FRONTAL CLOSE-UP: head and shoulders, head square to camera, full front (not three-quarter or profile, no head tilt), both ears visible, nose centered, eyes toward the lens through the clear lenses, that exact warm smile; blue denim collar and white lace-trimmed cami at the neckline; face must match the reference exactly.
+- Center, FULL-BODY FRONT: head to sneakers, standing in a relaxed upright pose, weight balanced, arms hanging naturally at her sides, both hands visible and empty, facing camera, smiling; the cropped jacket and high white waistband clearly showing her slim waistline.
+- Right, FULL-BODY BACK: head to sneakers, standing straight, facing directly away, showing the plain back of the cropped blue denim jacket ending at the waist, the white jeans and her messy ginger bun from behind; glasses temple arms visible over her ears.
+Both full-body panels at identical scale, feet on the same ground line.
+
+Lighting and background, identical in every panel: a seamless neutral mid-grey studio backdrop, clean and even, faint soft gradient, no dark corners. Soft, even, flat diffuse light like a large broad softbox — no hard shadows, no hotspots, no blown highlights, no directional or moody light; flat balanced exposure, soft foot shadow. Matte skin, matte denim, crisp white fabrics kept neutral white, no glossy hotspots, no reflections in the glasses lenses.
+
+Same single woman across all panels, only the camera angle and crop change. Both arms whole, both hands normal and empty. Photographic, natural clean skin texture. No plastic CGI skin, no beauty-retouch, no 3D-render or cartoon look, no gaunt or unhealthy look, no clothing or hairstyle change between panels, no bag, no sunglasses, no dark tinted lenses, no sepia or film filter, no on-image text or labels.

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "char_alex2.png",
+    "canvas_tag": "char_alex2",
+    "script_tag": "char_alex2",
+    "sha256": "f50cf04ea788a9a828d8a01d7b9f048cce8c61a7e245082ec5b1615df82cc665"
+  },
+  {
+    "name": "char_jenny.png",
+    "canvas_tag": "char_jenny",
+    "script_tag": "char_jenny",
+    "sha256": "a2ce6ae795fe532b45b2d5f86e2c6d62774bc3aa6141bcdf560493c5c32ed8ce"
+  },
+  {
+    "name": "char_mika.png",
+    "canvas_tag": "char_mika",
+    "script_tag": "char_mika",
+    "sha256": "ffeb1541642d725aabf4fa300b27e6255369cee7e49830bebc120dcd08785c52"
+  },
+  {
+    "name": "char_band.png",
+    "canvas_tag": "char_band",
+    "script_tag": "char_band",
+    "sha256": "b1c8e49cae7df54febaaf6c2149720afecf8cd84f030ebfd4dfddb1d395ff1c7"
+  },
+  {
+    "name": "char_cat.png",
+    "canvas_tag": "char_cat",
+    "script_tag": "char_cat",
+    "sha256": "5896b339d1ba4dc0b8b1b05dd535dbdc6eec382177c665674213efa7a20dbd62"
+  },
+  {
+    "name": "loc_flat2.png",
+    "canvas_tag": "loc_flat2",
+    "script_tag": "loc_flat2",
+    "sha256": "66f520b478b116658af2cb9e6716625bb1314cb56bf8d290d9ff24653d299f66"
+  },
+  {
+    "name": "loc_italy.png",
+    "canvas_tag": "loc_italy",
+    "script_tag": "loc_italy",
+    "sha256": "a82d517fc746eea565444d74d8b1b7885d3b419c12773edf8252a5f2ef989217"
+  },
+  {
+    "name": "loc_mexico.png",
+    "canvas_tag": "loc_mexico2",
+    "script_tag": "loc_mexico",
+    "sha256": "b584d7f5003a2a7e0c7f4fbd86fcee48b7f7c76290d6145e543c84a9903bab28"
+  },
+  {
+    "name": "prop_pack.png",
+    "canvas_tag": "prop_pack",
+    "script_tag": "prop_pack",
+    "sha256": "fa6dcb4b9bbaf23fcb0f57017b2896b3caf167c3fbebbbc9b852396615d58b5b"
+  },
+  {
+    "name": "prop_phone.png",
+    "canvas_tag": "prop_phone",
+    "script_tag": "prop_phone",
+    "sha256": "a389e8f8888c7d10b8a7716affe072065fbc0c63b943e38bb5188a440fc26f2f"
+  },
+  {
+    "name": "japan_topshot.webp",
+    "canvas_tag": "japan_topshot",
+    "script_tag": "japan_topshot",
+    "sha256": "b5b2fced701212a11bde1f986d1d4df2ab201a1232151dd56caf162e1da1b45d"
+  },
+  {
+    "name": "loc_japan.png",
+    "canvas_tag": "loc_japan3",
+    "script_tag": "loc_japan",
+    "sha256": "9d758dc714e77a3361f344af069e1028fe326f5c44047296bbadebf1d9e7cc33"
+  }
+]

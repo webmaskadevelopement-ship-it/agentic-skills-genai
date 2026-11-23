@@ -1,0 +1,62 @@
+An 18-second live-action commercial, 16:9. Three hungry friends in an attic flat at dusk. One of them opens the Higgos app to order food, and the moment she taps, the anticipation of the meal carries her into Venice — mid-shot, same camera move, no dissolve.
+
+REFERENCES
+@char_mika — Mika: strawberry-blonde hair in a bun, tortoiseshell oval glasses, cropped denim jacket over a white lace cami, white jeans. Clear skin, NO freckles. Take face and clothes from the close-up panel; the full-body panels have cropped heads — never reproduce a cropped or cut-off head. Ignore the grey studio backdrop.
+@char_alex2 — Alex: curly dark hair, oversized red-and-white check shirt open over a white long-sleeve. Ignore the studio backdrop.
+@char_jenny — Jenny: long straight black hair, round black glasses, cream knit beanie with the cream zip-hoodie's hood worn OVER the beanie. Beanie and hood stay on in every shot, including out-of-focus background. Ignore the studio backdrop.
+@char_cat — the grey-and-white long-haired cat with the white chest bib and pale green eyes. Ignore the studio backdrop.
+@prop_phone — the red silicone-cased phone with the pill-shaped three-lens camera bar on the back. The ONLY phone in the film.
+@loc_flat2 — the attic living room: tilted skylights, record shelves with fairy lights, mustard sofa with red cushions and striped throw, mustard armchair, wooden coffee table with two mugs and a small vase holding one flower, teal-blue beanbag, patterned rug, pendant lamp, red column lamp. Geometry only; camera angle and any people in it are ignored.
+@loc_italy — the Venice canal terrace: round table with floral cloth, already served — three plates of tomato spaghetti, two glasses of red wine — bentwood chairs, geraniums along the rail, plaster wall with green shutters and an open window, the canal below. Geometry only; the food on the table stays.
+
+LOOK
+Clean modern digital cinema look, 35mm anamorphic: RICH, SATURATED COLOUR exactly like the location references — deep clean blacks, bright clean whites, punchy contrast, crisp detail. NOT a faded film look: no lifted blacks, no milky haze, no bloom or halation, no desaturated pastel grade, no grain worth noticing. Skin natural and warm. Wide lenses (16–28mm) and camera moves that are physically real and quick. The flat: dusk, warm saturated lamplight, deep mustard and red of the sofa, cold blue skylights, dark clean shadows. Venice: hard midday sun, high contrast, deep shadows, clear blue sky, deep green water, vivid red geraniums, warm ochre walls.
+
+CHARACTERS
+MIKA — warm and practical. Soft, level voice; small real reactions; she decides and acts without fuss. She never laughs anywhere in the film.
+JENNY — calm and sure of herself. Low, dry delivery, minimal face. Hungry here, not sad.
+ALEX — impulsive and playful. Big mouth, quick head turns, always moving.
+
+WHO IS WHERE
+MIKA lies along the mustard sofa on the red cushions, one hand on her stomach, the other holding @prop_phone.
+JENNY sits in the mustard armchair: both feet up on the seat, knees bent and raised, hands resting on her stomach — not on her knees. She never moves to the floor.
+ALEX half-lies on the teal-blue beanbag with @char_cat in his hands.
+
+WHAT IS BEHIND EACH OF THEM — so they land in the right seats
+In the flat, seen from the open side of the room: behind JENNY the record shelves with fairy lights; behind MIKA the tilted skylights with blue dusk and the back of the mustard sofa; behind ALEX the red column lamp and the floorboards.
+In Venice: behind MIKA the plaster wall with the open window and green shutters; behind JENNY the plaster wall and the timber door; behind ALEX the geranium rail and the canal.
+
+PHONE RULE
+The screen is never shown — no interface, no black glass. The phone is always angled so its screen faces the character and its red back or edge faces the camera. When someone taps, the finger comes down on the SCREEN side, seen from behind or in profile — never on the back.
+
+SHOTS
+
+0.0–1.5s — THE VERY FIRST FRAME OF THE CLIP IS THIS WIDE SHOT — not Mika, not a close-up of anyone. Establishing wide of the whole flat, 16mm, locked, from the open side of the room facing the sofa, at standing height; the whole room from wall to wall, every face small in frame. Everyone is in frame and clearly placed: JENNY at screen left in the mustard armchair — beanie and hood on, feet up on the seat, knees raised, hands on her stomach; MIKA in the centre lying along the mustard sofa on the red cushions, one hand on her stomach, the other holding @prop_phone; ALEX at screen right half-lying on the teal-blue beanbag with @char_cat in his hands. The coffee table with the vase between them. BACKGROUND: the tilted skylights with cold blue dusk behind the sofa, the record shelves with fairy lights, the pendant lamp above, the red column lamp at the side. Nobody speaks or moves beyond breathing. This shot only shows who sits where, and it is a separate shot: a hard cut at 1.5s takes us to the next one. No close-up of Mika exists before 1.5s.
+
+1.5–3.0s — Mika, from above at an angle, 24mm, locked. The frame is wide enough to show a good part of the sofa and cushions around her. BACKGROUND: only the mustard sofa seat and back around her, the red cushions under her head, a strip of the patterned rug at the frame edge. She lies on the red cushions, slightly tired but AWAKE: eyes OPEN for the entire shot, pupils clearly visible, looking up at the ceiling — never closed, never half-closed, never asleep; one hand flat on her stomach over her jacket, the other holding @prop_phone, its back to camera. At 2.2s her stomach growls, long and hollow. Her lips pull into a small displeased purse — the eyes stay open through it, no blink-and-hold, no grimace beyond that.
+
+3.0–8.3s — Jenny and the flower, 28mm. The camera physically travels over the coffee table from screen left to screen right at table height, panning to keep Jenny centred and visible for the whole shot. The vase does not move; because of the travel it enters at the right of frame, passes the centre, and almost exits at the left. Three focus phases, all mandatory: 3.0–4.2s focus on Jenny; 4.2–7.0s focus racks to the vase; 7.0–8.3s focus racks back to Jenny. BACKGROUND behind Jenny: the back of the mustard armchair, and beyond it the record shelves with fairy lights and the tilted skylights, all soft. Jenny, in her armchair with beanie and hood on, feet on the seat, knees up, hands on her stomach, holds ONE expression from first frame to last: a hungry, glazed, fixed stare at the vase, mouth relaxed and slightly open as if about to drool. No squint, no surprise, no new reaction when the flower changes. While the vase is in focus, 4.8–6.6s, the flower slowly and smoothly morphs into a roast chicken leg standing strictly VERTICAL in the vase — the meaty end up, the narrow bone end down inside the neck of the vase. No particles, glow, smoke or flash. The chicken leg exists only in this shot.
+
+8.3–11.3s — Alex and Mika, 24mm, three-quarter angle on Alex on the beanbag, camera low. BACKGROUND: at the start the teal-blue beanbag and the floorboards and rug behind him; as the short orbit moves round him it opens up the mustard sofa with Mika lying on it, red cushions, the skylights behind her — Mika looking at him, puzzled. Alex leans in to @char_cat and at 9.6s opens his mouth wide over it as if about to eat it — tongue stays inside. He never gets to finish the gag. At 10.05s, while the mouth is still wide open over the cat, Mika cuts in from the sofa, and focus starts racking from Alex to her on her very first word: "Okay. We need food." — spoken 10.05–11.1s, still LYING down, practical, a little puzzled and disapproving, not angry; she is hungry too. Short and joined up, no long gap after "Okay". Alex freezes on her voice, looks at his friends and closes his mouth over her speech — no finished reaction, no silence, no separate focus shift before the line. Right after "food", at 11.1s, she starts to push herself up — cut on the first movement, 11.3s.
+
+11.3–13.7s — Mika sitting on the sofa, 28mm, medium shot waist-up. She is already seated, feet on the floor but out of frame, @prop_phone in her hand, its back to camera. A clear ORBIT of about 135°: the camera starts behind her right shoulder, travels through her right profile to a front three-quarter view, pulling back slightly as it goes, and never stops for the lines. BACKGROUND turns with the orbit: it starts on the coffee table and Jenny's armchair soft beyond, passes the record shelves and the red column lamp, and at the three-quarter angle lands on the sofa back with the tilted skylights and blue dusk behind her. 11.5–12.6s, looking at her friends, not at the phone, conversational, confident, quick: "Let's check Higgos." Only after the last syllable of "Higgos" does she look down at the phone. 12.6–12.95s a micro-pause: her eyes scan the screen as if she has found something appetising — no swipe, no tap. 12.95–13.3s, still looking INTO the phone, not up at her friends, pleased, the mood turning from puzzled to happy anticipation: "Ooh." At 13.7s ONE tap on the screen with her index finger — and the match cut comes on that tap, with the camera at the front three-quarter angle. No waiting between tap and cut.
+
+13.7–18.0s — MATCH CUT into @loc_italy. Same 28mm, same three-quarter angle, same size and position of Mika in frame, same orbit continuing at the same speed with the same slight pull-back. She is already seated at the terrace table, a plate of tomato spaghetti in front of her. BACKGROUND: the plaster wall with the open window and green shutters directly behind her; as the orbit comes round to frontal, the timber door at one edge and geraniums at the other, hard sun on the wall. Right after the cut she lowers the phone down or to the side, her eyes drop to the plate, and 14.2–14.7s, warm appetising joy, a natural short word, not stretched, not shouted: "Pasta!" The orbit keeps moving during the line, continues to a frontal view and eases to a smooth stop by 16.4s. She then reaches for her fork. Hard midday sun, geraniums at the edge of frame.
+
+SOUND
+No music. Minimal ambience only: in the flat a quiet room tone and the stomach growl at 2.2s; in Venice light water lap and a distant gull. No other effects, no stings, no whooshes. Ambience cuts with the match cut at 13.7s.
+Voices: clean, close, professional studio dialogue recording on a Neumann U 87 Ai — dry, no echo, no noise; the microphone never appears in frame.
+Lines, each spoken exactly once and nothing else: 10.05–11.1s Mika "Okay. We need food." · 11.5–12.6s Mika "Let's check Higgos." · 12.95–13.3s Mika "Ooh." · 14.2–14.7s Mika "Pasta!"
+"Pasta!" is spoken only in Italy, never at home. Nobody says "Italian". No added words, interjections, laughter, humming or music.
+
+KEEP CONSISTENT
+Faces and clothes exactly as the references. Mika without freckles, never a cropped head. Jenny's beanie and hood on in every frame.
+The clip opens on the wide of the whole room with all three in frame — never on a close-up. Mika's eyes are open in every shot; she is never shown sleeping or with her eyes shut.
+Seats never change: Jenny in the armchair at screen left, Mika on the sofa in the centre, Alex on the beanbag at screen right, as set in the first shot.
+Jenny stays in her armchair for the whole clip, feet on the seat, hands on her stomach.
+The chicken leg appears only 4.8–8.3s; in every other shot the vase holds the plain flower, and Jenny looks at the flower, not at chicken.
+Mika never laughs. The camera never stops for a line.
+One phone, @prop_phone, in Mika's hand throughout; the screen is never seen; the tap at 13.7s lands on the screen side.
+13.7s is a hard cut that changes only the world — same orbit, same speed, same framing.
+Colour stays rich and saturated in every shot — never washed out, faded, hazy or pastel.
+No subtitles, no on-screen text.

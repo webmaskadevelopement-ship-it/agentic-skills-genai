@@ -1,0 +1,70 @@
+Use @loc_italy_base as the exact base. Keep everything
+unchanged — composition, camera angle, warm
+sunlight, film grade, the terrace, the flowers,
+the canal, the palazzo facades — EXCEPT the
+specific edits listed below. Do not regenerate
+the scene, only apply these corrections.
+
+EDIT 1 — CLEAR AND REBUILD THE TABLE ZONE:
+STEP A — CLEAR: Delete ALL chairs around the
+table. Delete EVERYTHING on the tablecloth — all
+plates, all glasses, all cutlery, the fruit bowl,
+everything. The result of step A: an empty round
+table with its cloth, standing alone on the
+terrace.
+
+STEP B — REBUILD, exactly this and nothing more:
+
+Place THREE identical wooden bistro chairs at
+the table, at three positions around it:
+one chair on the LEFT side of the table,
+one chair on the RIGHT side,
+one chair on the FAR side (behind the table,
+facing the camera).
+All three pushed close to the table edge.
+
+On the tablecloth, one setting at each of those
+three positions, each setting sitting at the
+table edge directly where its chair stands:
+— LEFT edge of the table: one plate of pasta al
+   pomodoro + one wine glass with red wine +
+   cutlery on a napkin
+— RIGHT edge of the table: one plate of pasta al
+   pomodoro + one wine glass with red wine +
+   cutlery on a napkin
+— FAR edge of the table: one plate of pasta al
+   pomodoro + one wine glass with red wine +
+   cutlery on a napkin
+Wine glasses total in the image: THREE — count
+them: left glass, right glass, far glass.
+Not two. Three.
+
+At the exact CENTER of the table: the salt shaker
+and the pepper shaker. Nothing else exists on
+this table.
+
+EDIT 2 — REMOVE THE SIGN:
+Remove the white wall plaque with lettering on
+the right side of frame completely — restore
+clean weathered plaster matching the wall's
+color and texture. No text remains anywhere in
+the image.
+
+EDIT 3 — TURN THE GONDOLA TOWARD THE CAMERA:
+The gondola with the gondolier: FLIP its
+direction — bow facing TOWARD the camera,
+approaching, the gondolier standing at the stern
+behind, rowing with his single long oar, seen
+from the FRONT, natural posture, mid-stroke.
+Same position in the canal, same scale.
+
+EDIT 4 — REMOVE THE BOAT IN THE DISTANCE:
+Remove the dark motorboat moored in the canal
+depth — restore open water: rippling teal water,
+building reflections, the distant bridge
+unobstructed.
+
+Everything else stays exactly as in @loc_italy_base —
+same light and shadows, same flowers and
+geraniums, same tablecloth, same film texture
+and color grade.

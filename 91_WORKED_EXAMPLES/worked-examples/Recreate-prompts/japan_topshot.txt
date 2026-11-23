@@ -1,0 +1,9 @@
+Create a flat top-down blocking diagram, 16:9, on plain white. The camera is directly above the scene, with no perspective or tilt. Use thin light-grey outlines for the table, placemats, plates, sushi, cutlery and phone; muted coloured outlines for three simplified people. No shading, shadows, solid fills, labels or texture.
+
+Coordinates below are percentages of the full frame, measured from the left edge for X and the top edge for Y. Draw a round table near the centre. Three rectangular placemats occupy: top X 44–58, Y 11–40; left X 28–42, Y 34–65; right X 59–72, Y 35–64. Three round individual plates are centred at (50.5,26), (35,49.5) and (65.5,50), each with six nigiri shown as two rows of three rounded rectangles. Two smaller shared plates at (46.5,42.5) and (54,53.5) each hold six maki, shown as circles with smaller circles inside. Cutlery pairs sit near (41,25), (37,68) and (62,35).
+
+A face-down phone lies at X 32–39.5, Y 69–79, its long axis almost horizontal with a slight tilt. Show only its back and a camera bar near its left end.
+
+Three people appear as schematic overhead outlines: heads as ovals, shoulders, arms and hands, no facial or clothing detail. Muted BLUE at the top spans X 40–66, body cropped by the top edge, hands reaching down to (42,26) and (58,33). Muted ORANGE at left spans X 0–24, Y 32–75, head at (16,50), hands reaching right to (30,43) and (31,63). Muted GREEN at right spans X 70–95, Y 33–72, head at (88,55), hands reaching left to (70,38) and (69,69).
+
+Nothing else: no bottom person or bottom place setting, no floor, tatami, cushions, room, photorealistic food, phone display, text or labels.

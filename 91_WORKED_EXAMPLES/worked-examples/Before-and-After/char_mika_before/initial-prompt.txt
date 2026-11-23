@@ -1,0 +1,27 @@
+Generate a NEW three-panel character reference sheet of a young woman. Keep the same face, smile, eyeglasses, hair and denim jacket in all three panels. A real photograph, documentary-grade realism. Three panels side by side in one horizontal row with thin divider lines, 16:9 sheet.
+
+MANDATORY color rendering, highest priority: a clean modern digital photograph with NEUTRAL white balance and true-to-life natural colors. No sepia, no warm amber cast, no film emulation, no vintage filter, no film grain, no LUT look. Whites read as clean white, greys as neutral grey, skin tones natural. Crisp, clear, unfiltered.
+
+Character, identical in all panels: a 22-year-old woman with fair skin, a light natural flush and clear natural skin with no freckles, warm brown eyes, full soft eyebrows, defined elegant cheekbones, small gold hoop earrings. Her smile: a cute, warm, genuine closed-mouth smile, corners lifted, softly smiling eyes, friendly and a little playful. Her eyeglasses: narrow oval lenses in a thin dark tortoiseshell frame, fully clear transparent lenses, eyes clearly visible through them. Do not reshape, slim, age, symmetrize or beautify.
+
+Body, same in all panels: a slender petite figure with natural healthy proportions and relaxed posture.
+
+Hair, same in all panels: ginger-red hair swept up into a loose messy high bun with soft volume, wispy strands at the forehead and temples, a few loose face-framing strands at the neck.
+
+Wardrobe, same in all panels:
+- a cropped denim jacket in a classic medium-blue wash: hem ending at the natural waist, neat fit on her slim frame, spread collar, silver metal buttons down the front worn open, chest flap pockets, fitted sleeves with buttoned cuffs
+- underneath: a fitted white cami top with a delicate lace-trimmed hem, snug on the torso, a sliver of midriff showing between top and waistband
+- a thin gold pendant necklace
+-  high-waisted straight-leg jeans in clean WHITE denim, fitted at the waist, relaxed straight fall through the leg
+- simple white leather sneakers, clean minimal design
+- NO bag, no satchel, no sunglasses, no phone, empty hands
+
+Panels:
+- Left, FRONTAL CLOSE-UP: head and shoulders, head square to camera, full front (not three-quarter or profile, no head tilt), both ears visible, nose centered, eyes toward the lens through the clear lenses, a warm natural smile; blue denim collar and white lace-trimmed cami at the neckline; keep the same face throughout the sheet.
+- Center, FULL-BODY FRONT: framed from the neck down, with the head cropped at the base of the neck, standing in a relaxed upright pose, weight balanced, arms hanging naturally at her sides, both hands visible and empty, facing camera; the cropped jacket and high white waistband clearly showing her slim waistline.
+- Right, FULL-BODY BACK: framed from the neck down at the same crop height, standing straight, facing directly away, showing the plain back of the cropped blue denim jacket ending at the waist, the white jeans and the back of the jacket.
+Both body panels at identical scale, feet on the same ground line. The face appears only in the left portrait panel; the other two panels show clothing and body proportions.
+
+Lighting and background, identical in every panel: a seamless neutral mid-grey studio backdrop, clean and even, faint soft gradient, no dark corners. Soft, even, flat diffuse light like a large broad softbox — no hard shadows, no hotspots, no blown highlights, no directional or moody light; flat balanced exposure, soft foot shadow. Matte skin, matte denim, crisp white fabrics kept neutral white, no glossy hotspots, no reflections in the glasses lenses.
+
+Same single woman across all panels, only the camera angle and crop change. Both arms whole, both hands normal and empty. Photographic, natural clean skin texture. No plastic CGI skin, no beauty-retouch, no 3D-render or cartoon look, no gaunt or unhealthy look, no clothing or hairstyle change between panels, no bag, no sunglasses, no dark tinted lenses, no sepia or film filter, no on-image text or labels.

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "char_mika_before",
+    "image": "char_mika_before/char_mika_before.png",
+    "sha256": "c2993ec482b22f6744de4771fe9308f7f614d43fef40e328598b469adf62e169",
+    "initial_prompt": "char_mika_before/initial-prompt.txt",
+    "tutorial_initial_model": "soul_cinematic",
+    "historical_edit_prompt": "char_mika_before/historical-edit-prompt.txt",
+    "historical_edit_model": "seedream_v5_pro",
+    "historical_edit_required_reference": "@image_1 = char_mika_before.png",
+    "final_asset": "../Assets/char_mika.png",
+    "initial_source": "Notion script C-1, first Mika casting / H-1.5",
+    "edit_screencast": "C-2 / H-2",
+    "notes": [
+      "Initial prompt already asks for no freckles and neck-down outfit views; the selected output did not fully follow it. Do not call those new requirements.",
+      "Historical edit prompt needs its base image and must not be presented as a reference-free Recreate prompt."
+    ]
+  },
+  {
+    "id": "loc_italy_base",
+    "image": "loc_italy_base/loc_italy_base.png",
+    "sha256": "3d546f1c460580c091c93f2f73c34ae7f394178d0cf7bea2670bbf0d1cc37d35",
+    "initial_prompt": "loc_italy_base/initial-prompt.txt",
+    "tutorial_initial_model": "soul_cinematic",
+    "historical_edit_prompt": "loc_italy_base/historical-edit-prompt.txt",
+    "historical_edit_model": "seedream_v5_pro",
+    "historical_edit_required_reference": "@loc_italy_base = loc_italy_base.png",
+    "final_asset": "../Assets/loc_italy.png",
+    "initial_source": "Canvas A07 / ИТАЛИЯ initial two-seat location recipe",
+    "edit_screencast": "C-9 / H-9",
+    "notes": [
+      "Original Canvas recipe ends with the empty heading GRADE:. Preserved exactly; not silently completed. The opening paragraph already specifies the grade.",
+      "Soul Cinema is the tutorial workflow model; the exact original generation model must be reported by the separate model audit, not inferred from appearance.",
+      "Historical edit prompt needs its base image and must not be presented as a reference-free Recreate prompt."
+    ]
+  }
+]

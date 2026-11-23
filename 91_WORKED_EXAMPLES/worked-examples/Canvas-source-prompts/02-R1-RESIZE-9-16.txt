@@ -1,0 +1,51 @@
+GENERATIVE REFRAME 16:9 → 9:16 of the finished 30-second Higgos commercial. Outpainting only — the original picture is never cropped, zoomed or moved.
+
+INPUT
+@final_v2_16x9 — the locked final edit: 30.0 s, 1920×1080, 24 fps, 15 shots, finished sound. Picture and sound are final; nothing inside the original frame changes and no sound is generated.
+
+OUTPUT
+1080×1920 vertical, 24 fps, exactly 30.0 s, same cut points. Audio: the source track passed through untouched — no generated sound of any kind.
+
+HOW THE FRAME IS BUILT
+TOP AND BOTTOM ONLY. The original 16:9 image is placed at FULL WIDTH: its left edge IS the left edge of the output, its right edge IS the right edge of the output, so the original already covers the whole width and NOTHING is generated to the left or right of it — zero pixels of new picture on the sides, ever. It sits in the exact vertical centre, so the middle 608 px of the 1920 px tall output are the original film one to one, and the ONLY new picture is two equal bands: about 656 px ABOVE and about 656 px BELOW. The original never moves left or right, never moves up or down, never drifts toward a corner, never changes size, in any frame of the 30 seconds and across every cut — it is pinned to the same position for the whole video. Every original pixel is kept, uncropped, unshifted, not zoomed, not mirrored. The composition of each original shot IS the composition of the output: the subject stays exactly where the original frame put it; the two bands only add ceiling/sky above and floor/table below — they never re-centre, re-crop, re-balance or re-compose the shot. Inside the bands the scene continues as if the camera had simply had a taller sensor — same lens, same perspective, same focus falloff, same colour, same grain, same light, same motion. No zoom-in, no crop, no pan-and-scan, no letterbox, no black bars, no blurred or mirrored copies of the picture as filler. The seams between the original and the bands are invisible: no line, no change in brightness, sharpness or colour temperature at the boundary.
+
+RULES FOR THE GENERATED BANDS
+The extensions are ENVIRONMENT ONLY: ceilings, walls, sky, floors, table tops, fabric, foliage, water, out-of-focus continuations of what already touches the frame edge. Never add a new person, face, hand, animal, phone, screen, food item, sign, text, logo or brand mark. Never duplicate or clone anything that exists in the original (one table, one vase, one cat, one phone, one set of plates — never a second copy above or below). A body that is cut by the original frame edge continues only as clothing and shape in the same pose, soft and undramatic, never with new hands or faces. Wide lenses: in the top band verticals keep converging upward; in the bottom band the floor and table surfaces keep the same downward perspective. Every camera move in the original (orbit, push-in, travel, pull-back, whip) carries into the bands with matching speed and parallax — the extensions never float, slide or lag against the original. Every hard cut in the original is a hard cut in the bands on the same frame; the band content changes completely with each new shot and never carries the previous location over. Match cuts (8.75 s, 15.2 s) change the bands on the exact same frame as the original changes the world. Light and colour stay rich and saturated exactly like the source — no washed-out, hazy or desaturated fill.
+
+SHOT BY SHOT — what fills the ABOVE and BELOW bands
+
+0.0–1.6 s — attic flat, Mika lying on the mustard sofa, camera above her at an angle. ABOVE: the sofa back and the red-and-white striped throw continuing, then the pale attic wall and the edge of a tilted skylight with cold blue dusk. BELOW: the mustard sofa seat and its front edge, then the patterned rug and dark floorboards. Warm lamplight.
+
+1.6–3.6 s — Jenny in the mustard armchair behind the coffee table, the roast chicken leg in the vase in the foreground. ABOVE: the sloped attic ceiling with skylight, the pendant lamp, record shelves with fairy lights continuing up, soft. BELOW: the wooden coffee-table top continuing toward camera with the base of the vase, then the table edge and the rug, soft. The chicken leg stays one object; nothing new on the table.
+
+3.6–6.5 s — Alex on the teal beanbag with the cat, low angle, Mika lying on the sofa behind. ABOVE: the sloped ceiling and tilted skylights with blue dusk, the pendant lamp, fairy lights. BELOW: the teal beanbag continuing, the patterned rug and floorboards. The short orbit carries into both bands.
+
+6.5–8.75 s — Mika sitting up on the sofa with the phone, orbit around her. ABOVE: the sofa back, the tilted skylights with blue dusk and the sloped ceiling turning with the orbit. BELOW: the sofa seat and cushions, her white jeans continuing to the sofa edge, the rug. The phone stays one object with its red back to camera; no screen is ever visible.
+
+8.75–10.5 s — MATCH CUT to the Venice terrace, same framing on Mika. On this exact frame the bands change to Venice. ABOVE: the plaster wall continuing up with the open window and green shutters, a strip of ochre wall and hard blue sky. BELOW: the floral tablecloth continuing toward camera with the plate edge, then the stone terrace floor. Hard midday sun.
+
+10.5–11.9 s — from the water, gondola crossing, terrace beyond. ABOVE: the ochre and terracotta facades rising with green shutters and windows, geraniums on balconies, clear blue sky. BELOW: deep green canal water with the gondola's dark hull continuing and its ripples; no second boat.
+
+11.9–12.7 s — Mika eating spaghetti, close, the hand with the red phone entering. ABOVE: plaster wall and green shutters, soft. BELOW: the floral cloth, the plate rim and terrace floor, soft. The whip pan carries into the bands.
+
+12.7–15.2 s — push-in on Alex with the phone, Venice canal behind. ABOVE: ochre facades with green shutters rising, red geraniums, blue sky. BELOW: the terrace table with the tablecloth and the spaghetti plate edge, the geranium rail, terrace floor. The push-in carries into the bands.
+
+15.2–16.4 s — MATCH CUT to Mexico, same framing on Alex. On this exact frame the bands change to Mexico. ABOVE: the pink stucco wall with the mural rising to its roofline, green-white-red bunting crossing overhead, saturated blue sky. BELOW: the white plastic table with the taco plates' edge, then sun-hit concrete with hard shadows.
+
+16.4–17.4 s — behind the mariachi band, travelling left to right, the table beyond. ABOVE: sombrero brims continuing out of focus, bunting, sky, green hills. BELOW: the dark backs of the charro jackets continuing down out of focus, the concrete, white chair legs. The travel carries into the bands.
+
+17.4–17.9 s — over Mika's denim shoulder, Jenny grabbing the phone. ABOVE: bunting, the top of the pink wall, blue sky. BELOW: Mika's denim jacket continuing down, the white chair back, concrete. The slide behind her back carries into the bands.
+
+17.9–20.9 s — Japan tatami room, over Mika's shoulder, Jenny with the phone, Alex looking at his empty hand. On this frame the bands change to Japan. ABOVE: the bamboo blinds rising to the timber lintel, pale plaster and dark ceiling beams, the red paper lantern. BELOW: Mika's denim shoulder continuing down soft, the dark lacquer table edge, tatami with golden-hour light. The camera slide carries into the bands.
+
+20.9–23.0 s — TOP SHOT straight down on the round dark-lacquer table. ABOVE and BELOW: only more tatami floor — the woven mat texture with its dark edging strips — and the edges of the sage-green cushions; the table remains one circle, no extra plates, no fourth setting, no new hands.
+
+23.0–26.5 s — three-shot on Mika facing camera, Alex and Jenny in near foreground, blossom window behind her. ABOVE: the top of the bamboo blind, timber lintel, plaster and ceiling beams in warm light. BELOW: the dark lacquer table with the plates' edge, the near shoulders of Alex and Jenny continuing down soft in the same pose, tatami.
+
+26.5–30.0 s — attic flat packshot: red Higgos bags on the coffee table, fast pull-back down to the cat eating from its bowl on the rug. ABOVE: the sloped attic ceiling with tilted skylights, the pendant lamp, fairy lights and record shelves, moving with the pull-back. BELOW: the coffee-table front edge, then the patterned rug and floorboards continuing toward camera. The bags keep their existing logos; no new text or logo appears anywhere in the bands, and no second cat or bowl.
+
+AUDIO — NOTHING IS GENERATED
+The sound of this output is the ORIGINAL soundtrack of @final_v2_16x9, copied through unchanged, sample for sample, at the same timing — dialogue, the doorbell, the mariachi band, the room tone, the voice-over, every sound design element, all of it exactly as mixed in the source. Do NOT generate any audio at all: no music, no score, no ambience, no room tone, no foley, no footsteps, no crowd, no water, no wind, no birds, no traffic, no voices, no breathing, no lip-sync audio, no sound effects, no whooshes, no stingers, no audio for the new picture areas. Do not remix, re-level, re-time, extend, replace, fade or "enhance" the original sound. If the tool must write an audio track, that track IS the source audio and nothing else; silence is preferable to any new sound. This is a picture-only job.
+
+KEEP CONSISTENT
+The original 16:9 picture is untouched, at full width edge to edge, pinned to the exact vertical centre in every frame — never shifted left or right, never in a corner, never resized. New picture exists ONLY above and below it, never on the sides; the composition of the original shot is never changed.

@@ -1,0 +1,5 @@
+Write an image-edit prompt for @loc_italy_base. Keep the composition, camera angle, lighting and overall look unchanged.
+
+Clear the existing chairs and everything on the table, then rebuild the setup for three people: one wooden bistro chair on the left, one on the right and one on the far side facing the camera. Put a plate of pasta al pomodoro, a glass of red wine and cutlery on a napkin directly in front of each chair. Keep only salt and pepper in the centre.
+
+Remove the wall plaque and the distant motorboat. Turn the gondola so its bow faces the camera, keeping its position and scale.

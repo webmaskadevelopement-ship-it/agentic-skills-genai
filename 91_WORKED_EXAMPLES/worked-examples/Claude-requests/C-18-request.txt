@@ -1,0 +1,9 @@
+Map the orange figure (left) to @char_jenny, the blue figure (top) to @char_alex2, and the green figure (right) to @char_mika. Colours mark positions only; don't carry them into the characters' appearance. This is a new angle on the existing seating, not a change of seats.
+
+Match the dishes to the map: exactly three individual settings and two shared plates in the centre, no fourth setting at the bottom. Exactly three pairs of chopsticks on rests, one per individual setting, none for the shared plates. The phone lies face-down beside Jenny's plate.
+
+Straight-down view with a gentle clockwise rotation; table and seats stay fixed. Use the map for relative placement, but leave enough room to keep all three heads, hands, and the full table in frame throughout the move. Jenny continues her open-hand gesture from the previous shot and says, "I've been craving sushi." The plate stays on the table. People and room photorealistic, from their original references.
+
+Keep seating consistent across the revised Part 2, using @japan_topshot for relative seat positions. In the opening Italy wide: Jenny left, Alex far side centre, Mika right. For the phone-grab shot, cut to a new angle that puts Alex just off-screen right of Mika, preserving the rightward whip without moving anyone. Keep the location's architecture fixed. Apply the map's sushi and tableware layout only in Japan.
+
+Remove the gondola insert and Alex's stand-up action. Keep everyone seated throughout, and retime the revised Part 2 to 19 seconds.

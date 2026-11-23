@@ -1,0 +1,49 @@
+Use @image1 as the exact base. Keep everything 
+unchanged — composition, camera angle, late-dusk 
+mood, warm lamp light, cool window light, the 
+mustard sofa with red cushions, the sloped 
+ceiling windows, the kitchen, the vinyl shelves, 
+the rug, the film grade — EXCEPT the specific 
+edits listed below. Do not regenerate the scene, 
+only apply these corrections.
+
+EDIT 1 — SHRINK THE FOREGROUND CABINET:
+The dark blurred cabinet edge in the right 
+foreground currently covers too much of the 
+frame. REDUCE it — make it noticeably smaller 
+and pushed further toward the frame edge, so it 
+occupies only a modest corner strip. Same heavy 
+defocus, same dark tone — just less of it, 
+opening up the view of the room.
+
+EDIT 2 — MOVE THE BEAN BAG TO THE RIGHT OF 
+THE SOFA:
+Move the cyan-teal bean bag from its current spot 
+(left of the sofa, by the shelves) to the RIGHT 
+side of the sofa — placed naturally on the rug 
+near the sofa's right end, same worn teal fabric, 
+same soft slouched shape, catching the same warm 
+lamp light.
+
+EDIT 3 — ARMCHAIR IN THE BEAN BAG'S OLD SPOT:
+Where the bean bag used to be (left of the sofa, 
+near the vinyl shelves): place a LOW LOUNGE 
+ARMCHAIR in the style of a Togo chair — a 
+low-slung armless quilted chair with soft rolled 
+horizontal channel folds, no legs, sitting 
+directly on the floor — upholstered in LIGHT 
+BROWN / camel fabric, slightly worn. Angled 
+toward the coffee table, consistent perspective 
+and scale with the sofa, lit by the same warm 
+ambient light.
+
+EDIT 4 — CLEAN THE COFFEE TABLE:
+Clear the coffee table: remove the magazines, 
+newspaper, red vinyl mat and extra mugs. Leave 
+exactly: TWO mugs and ONE small vase with a 
+modest flower. Nothing else on the tabletop — 
+clean warm wood surface.
+
+Everything else stays exactly as in <<<image_1>>> — 
+same light and shadows, same colors, same window 
+dusk, same film texture and grain.
