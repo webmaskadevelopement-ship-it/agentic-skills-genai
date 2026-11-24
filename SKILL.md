@@ -38,7 +38,7 @@ method.
 | `08_POST_PRODUCTION_AND_EDITING/` | `ffmpeg-skill/`, `ghost-editor/`, `claude-shorts/`, `editorial-film-edit/`, `vox-motion-graphics/`, `fern-documentary/`, `OpenMontage/` (+ `_original_skill_archives/`) |
 | `90_REFERENCE_KNOWLEDGE/` | `prompt-knowledge/` (brand, image, video, model catalog, local scripts) + `open-higgsfield-app/` (model/voice catalogs, prompt-builder logic, 20 cinema-look plates) + `higgsfield-open-studio/` (self-contained Higgsfield craft library: 25 sub-skills, MCSLA prompt formula, 18 templates — user-added 2026-11-05) |
 | `91_WORKED_EXAMPLES/` | `worked-examples/` (reference only — never inject into user projects) |
-| `92_SKILL_DEVELOPMENT/` | `skill-development/` — internal skill factory (generators, blueprints, editing templates) incl. `skills/autonomous-post-production-ai-monorepo/` (720-skill finishing system) |
+| `92_SKILL_DEVELOPMENT/` | `skill-development/` — internal skill factory (generators, blueprints, editing templates) incl. `skills/autonomous-post-production-ai-monorepo/` (720-skill finishing system); `storyboard-parser-full-updated-skill-instruction-set.md` — standalone storyboard parser |
 
 ## 1. Fast routing table
 
@@ -89,6 +89,7 @@ govern the work. Note: it is script-grounded — never inject its reference exam
 | User sends a block-code brief (TRICK/FORMAT/ASSETS/BLOCKS, CAM-*/OPT-*/GRADE-* codes, Karima face lock, Russian ok) | `04_VIDEO_DIRECTION/cinedance-block-library/` |
 | End-to-end commercial: asset prompts → assembled video prompt → diagnosing a broken generation | `04_VIDEO_DIRECTION/commercial-pipeline/` (3 stages, fix playbook in `references/`) |
 | Motion transfer: copying movement/camera from a reference video onto new characters (Genjutsu), mouth lock | `04_VIDEO_DIRECTION/motiondojo-v1-SKILL.md` |
+| Storyboard prompts: parse a shot breakdown (PDF/txt/docx or plain text, with a storyboard template image as parameter authority) into storyboard JSON + per-shot frame-generation instructions | `92_SKILL_DEVELOPMENT/storyboard-parser-full-updated-skill-instruction-set.md` |
 
 ### Dance & action
 
